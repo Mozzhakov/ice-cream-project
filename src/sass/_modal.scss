@@ -46,8 +46,8 @@ ul {
   max-width: 280px;
   height: auto;
 
-  background: #fcfcfc;
-  border: 2px solid #f8d24e;
+  background: $white-text-color;
+  border: 2px solid $accent-color;
   border-radius: 10px;
 
   @media screen and (min-width: 768px) {
@@ -57,7 +57,7 @@ ul {
 
   transform: scale(1);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform $timing-function $duratoin;
 }
 
 .modal.active,
@@ -67,14 +67,12 @@ ul {
 }
 
 .modal__title {
-  font-family: 'Seymour One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  /* or 150% */
+  font-family: $secondary-ff;
 
-  color: #131313;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: $black-text-color;
 
   margin-bottom: 20px;
 
@@ -82,10 +80,9 @@ ul {
     margin-bottom: 40px;
 
     font-size: 20px;
-    line-height: 140%;
-    /* identical to box height, or 140% */
+    line-height: 1.4;
 
-    color: #131313;
+    color: $black-text-color;
   }
 }
 
@@ -98,18 +95,18 @@ ul {
   justify-content: center;
   align-items: center;
 
-  background-color: #fcfcfc;
+  background-color: $white-text-color;
 
   border: 0px;
 
   cursor: pointer;
   fill: currentColor;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $timing-function $duratoin;
 
   &:hover,
   &:focus {
-    color: #f8d24e;
+    color: $accent-color;
   }
 }
 
@@ -210,13 +207,13 @@ ul {
   }
 
   &.modal__iceCoffee {
-    background: #efd478;
-    border: 2px solid #efd478;
+    background: $products-yellow-color;
+    border: 2px solid $products-yellow-color;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
   }
 
   &.modal__milkShake {
-    border: 2px solid #d6936d;
+    border: 2px solid $products-brown-color;
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
     border-radius: 15.7808px;
   }
@@ -227,20 +224,19 @@ ul {
   position: absolute;
   bottom: 20px;
 
-  font-family: 'Montserrat';
-  font-style: normal;
+  font-family: $main-ff;
+
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  color: #131313;
+  color: $black-text-color;
 }
 
 .modal__form {
-  // max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12.12px;
@@ -260,7 +256,7 @@ ul {
 .modal__input-div {
   position: relative;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $timing-function $duratoin;
 
   @media screen and (max-width: 768px) {
     width: 220px;
@@ -273,16 +269,15 @@ ul {
 
   padding: 8px 12px;
 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
+  font-family: $main-ff;
+
   font-size: 12px;
-  line-height: 140%;
+  line-height: 1.4;
 
-  color: #131313;
+  color: $black-text-color;
 
-  background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  background: $input-bg-color;
+  border: 1px solid $main-bg-color;
   border-radius: 10px;
 
   &:focus-visible {
@@ -296,14 +291,13 @@ ul {
 
 .modal__input-textarea {
   &::placeholder {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    font-family: $main-ff;
+
     font-size: 12px;
-    line-height: 140%;
+    line-height: 1.4;
     /* or 17px */
 
-    color: #131313;
+    color: $black-text-color;
   }
 
   & .modal_form-input {
@@ -311,13 +305,12 @@ ul {
 
     padding: 8px 12px;
 
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 140%;
+    font-family: $main-ff;
 
-    color: #131313;
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: $black-text-color;
   }
 }
 
@@ -328,37 +321,37 @@ ul {
 .modal__button {
   padding: 12px 34px;
 
-  font-family: 'Montserrat';
-  font-style: normal;
+  font-family: $main-ff;
+
   font-weight: 600;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   display: flex;
   align-items: center;
   text-align: center;
 
-  color: #131313;
+  color: $black-text-color;
 
-  background-color: #f8d24e;
+  background-color: $accent-color;
 
-  border: 0px solid #f8d24e;
+  border: 0px solid $accent-color;
   border-radius: 10px;
-  color: #131313;
+  color: $black-text-color;
 
   &:hover {
-    background: #0a8817;
-    border: 0px solid #0a8817;
+    background: $hover-green-color;
+    border: 0px solid $hover-green-color;
   }
 
   &:focus {
-    color: #fcfcfc;
-    background: #0a8817;
-    border: 0px solid #0a8817;
+    color: $white-text-color;
+    background: $hover-green-color;
+    border: 0px solid $hover-green-color;
   }
 
   &:disabled {
-    background: #ababab;
-    border: 0px solid #ababab;
+    background: $disabled-color;
+    border: 0px solid $disabled-color;
   }
 
   & .modal__button-icon {

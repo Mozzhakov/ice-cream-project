@@ -25,9 +25,10 @@
         <img
           class="modal__img"
           srcset="
-            ./images/modal-buyNow-iceCream.png    1x,
-            ./images/modal-buyNow-iceCream@2x.png 2x
+            ./images/modal/modal-buyNow-iceCream.png    1x,
+            ./images/modal/modal-buyNow-iceCream@2x.png 2x
           "
+          src="./images/modal/modal-buyNow-iceCream.png"
           alt="ice cream"
         />
         <span class="modal__circl modal__iceCream"></span>
@@ -39,9 +40,10 @@
         <img
           class="modal__img"
           srcset="
-            ./images/modal-buyNow-iceCoffee.png    1x,
-            ./images/modal-buyNow-iceCoffee@2x.png 2x
+            ./images/modal/modal-buyNow-iceCoffee.png    1x,
+            ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
           "
+          src="./images/modal/modal-buyNow-iceCoffee.png"
           alt="ice coffe"
         />
         <span class="modal__circl modal__iceCoffee"></span>
@@ -53,9 +55,10 @@
         <img
           class="modal__img"
           srcset="
-            ./images/modal-buyNow-milkShake.png    1x,
-            ./images/modal-buyNow-milkShake@2x.png 2x
+            ./images/modal/modal-buyNow-milkShake.png    1x,
+            ./images/modal/modal-buyNow-milkShake@2x.png 2x
           "
+          src="./images/modal/modal-buyNow-milkShake.png"
           alt="milkShake"
         />
         <span class="modal__circl modal__milkShake"></span>
@@ -67,50 +70,40 @@
 
     <form class="modal__form" name="modal-form" autocomplete="off">
       <label class="modal__input-label">
-        <div class="modal__input-div">
-          <input
-            class="modal__form-input"
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-        </div>
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
       </label>
 
       <label class="modal__input-label">
-        <div class="modal__input-div">
-          <input
-            class="modal__form-input"
-            type="tel"
-            name="tel"
-            placeholder="Phone"
-            required
-          />
-        </div>
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
       </label>
 
       <label class="modal__input-label">
-        <div class="modal__input-textarea">
-          <textarea
-            class="modal__form-input"
-            name="comment"
-            rows="3"
-            placeholder="Comment"
-            required
-          ></textarea>
-        </div>
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
       </label>
 
       <div class="modal__button-container">
-        <button class="modal__button" type="submit">
-          submit
-          
-          </svg>
-        </button>
+        <button class="modal__button" type="submit">submit</button>
       </div>
     </form>
   </div>
 </div>
-
-
