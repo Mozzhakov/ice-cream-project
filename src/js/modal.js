@@ -52,11 +52,21 @@ document.addEventListener('DOMContentLoaded', function () {
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
+
+      // Делаю динамическое изменение позиционирование модального окна в зависимости от его высоты.
+
+      if (window.innerHeight < modalElem.offsetHeight) {
+        overlay.style.justifyContent = 'flex-start';
+        overlay.style.paddingTop = '50px';
+      } else {
+        overlay.style.justifyContent = 'center';
+      }
     }); // end click
   }); // end foreach
 
   closeButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
+      removeClassListStyle();
       var parentModal = this.closest('.modal');
 
       parentModal.classList.remove('active');
@@ -67,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.addEventListener(
     'keyup',
     function (e) {
+      removeClassListStyle();
       var key = e.keyCode;
 
       if (key == 27) {
@@ -80,5 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    removeClassListStyle();
   });
 }); // end ready
+
+// Remove overlay style function on modal close
+const removeClassListStyle = () => {
+  const overlay = document.querySelector('.overlay');
+  overlay.style.justifyContent = '';
+  overlay.style.paddingTop = '';
+};

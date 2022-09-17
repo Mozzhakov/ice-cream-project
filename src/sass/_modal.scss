@@ -19,6 +19,8 @@ ul {
   visibility: hidden;
 
   position: fixed;
+  overflow-y: scroll;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -26,6 +28,11 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
   transition: 0.3s all;
+
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
 }
 
 // --------------- MODAL STYLES ------------------------
@@ -33,15 +40,16 @@ ul {
   /* Hide all modals  */
   opacity: 0;
   visibility: hidden;
-
+  overflow-y: scroll;
   // z-index must be greater than overlay
   z-index: 21;
 
   // modal styles
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // margin-top: 15%;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   width: 100%;
   max-width: 280px;
   height: auto;
@@ -375,45 +383,105 @@ ul {
 
 // modal about us styles
 
-.modal__about-us-text {
-  font-family: $main-ff;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.4;
-
-  color: $black-text-color;
-}
-
-.modal__about-us-video-zone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 200px;
-  width: 100%;
-
-  background-color: $black-text-color;
-  margin-bottom: 30px;
-  border: 0px;
-  border-radius: 10px;
-  fill: $white-text-color;
-
-  transition: background-color $duratoin $timing-function,
-    color $duratoin $timing-function, fill $duratoin $timing-function;
-
-  &:hover {
-    color: $accent-color;
-    background-color: $tab-menu-bg-color;
-
-    fill: $accent-color;
+.modal__how-its-made {
+  .modal__title {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
   }
 
-  & svg {
-    width: 27.3px;
-    height: 27.3px;
+  .modal__about-us-text {
+    font-family: $main-ff;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: $black-text-color;
+  }
+
+  .modal__about-us-video-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    width: 100%;
+
+    background-color: $black-text-color;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 10px;
+    fill: $white-text-color;
+
+    transition: background-color $duratoin $timing-function,
+      color $duratoin $timing-function, fill $duratoin $timing-function;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
 
     &:hover {
-      fill: currentColor;
+      color: $accent-color;
+      background-color: $tab-menu-bg-color;
+
+      fill: $accent-color;
     }
+
+    & svg {
+      width: 27.3px;
+      height: 27.3px;
+
+      &:hover {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+// ------------ MODAL OUR LOCATIONS
+
+.modal__our-location {
+  & .modal__container {
+    padding: 28px;
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 60px;
+    }
+  }
+
+  & .modal__title {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+  & .modal__button-container {
+    margin: 24px 0 0 0;
+
+    @media screen and (min-width: 768px) {
+      margin: 32px 0 0 0;
+    }
+  }
+}
+
+.modal__our-location-map {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  width: 100%;
+
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  & > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }

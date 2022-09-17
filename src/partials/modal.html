@@ -1,134 +1,174 @@
-<div class="overlay js-overlay-modal"></div>
-
 <div class="test-buttons">
   <button class="js-open-modal" data-modal="1">TEST BUTTON - BUY NOW</button>
   <button class="js-open-modal" data-modal="2">TEST BUTTON - READ MORE</button>
+  <button class="js-open-modal" data-modal="3">
+    TEST BUTTON - OUR LOCATION
+  </button>
 </div>
 
 <!-- -------------------- Buy now modal window -------------------- -->
+<div class="overlay js-overlay-modal">
+  <div class="modal" data-modal="1">
+    <button class="modal__button-close js-modal-close" data-modal-close>
+      <svg width="16" height="17" viewBox="0 0 16 17">
+        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+      </svg>
+    </button>
 
-<div class="modal" data-modal="1">
-  <button class="modal__button-close js-modal-close" data-modal-close>
-    <svg width="16" height="17" viewBox="0 0 16 17">
-      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
-    </svg>
-  </button>
+    <div class="modal__container" role="group">
+      <p class="modal__title">Buy now</p>
 
-  <div class="modal__container" role="group">
-    <p class="modal__title">Buy now</p>
+      <ul class="modal__items">
+        <li class="modal__item">
+          <img
+            class="modal__img"
+            srcset="
+              ./images/modal/modal-buyNow-iceCream.png    1x,
+              ./images/modal/modal-buyNow-iceCream@2x.png 2x
+            "
+            src="./images/modal/modal-buyNow-iceCream.png"
+            alt="ice cream"
+          />
+          <span class="modal__circl modal__iceCream"></span>
 
-    <ul class="modal__items">
-      <li class="modal__item">
-        <img
-          class="modal__img"
-          srcset="
-            ./images/modal/modal-buyNow-iceCream.png    1x,
-            ./images/modal/modal-buyNow-iceCream@2x.png 2x
-          "
-          src="./images/modal/modal-buyNow-iceCream.png"
-          alt="ice cream"
-        />
-        <span class="modal__circl modal__iceCream"></span>
+          <p class="modal__text">ice cream</p>
+          <div class="modal__shape modal__iceCream"></div>
+        </li>
+        <li class="modal__item">
+          <img
+            class="modal__img"
+            srcset="
+              ./images/modal/modal-buyNow-iceCoffee.png    1x,
+              ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
+            "
+            src="./images/modal/modal-buyNow-iceCoffee.png"
+            alt="ice coffe"
+          />
+          <span class="modal__circl modal__iceCoffee"></span>
 
-        <p class="modal__text">ice cream</p>
-        <div class="modal__shape modal__iceCream"></div>
-      </li>
-      <li class="modal__item">
-        <img
-          class="modal__img"
-          srcset="
-            ./images/modal/modal-buyNow-iceCoffee.png    1x,
-            ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
-          "
-          src="./images/modal/modal-buyNow-iceCoffee.png"
-          alt="ice coffe"
-        />
-        <span class="modal__circl modal__iceCoffee"></span>
+          <p class="modal__text">ice coffee</p>
+          <div class="modal__shape modal__iceCoffee"></div>
+        </li>
+        <li class="modal__item">
+          <img
+            class="modal__img"
+            srcset="
+              ./images/modal/modal-buyNow-milkshake.png    1x,
+              ./images/modal/modal-buyNow-milkshake@2x.png 2x
+            "
+            src="./images/modal/modal-buyNow-milkshake.png"
+            alt="milkShake"
+          />
+          <span class="modal__circl modal__milkShake"></span>
 
-        <p class="modal__text">ice coffee</p>
-        <div class="modal__shape modal__iceCoffee"></div>
-      </li>
-      <li class="modal__item">
-        <img
-          class="modal__img"
-          srcset="
-            ./images/modal/modal-buyNow-milkshake.png    1x,
-            ./images/modal/modal-buyNow-milkshake@2x.png 2x
-          "
-          src="./images/modal/modal-buyNow-milkshake.png"
-          alt="milkShake"
-        />
-        <span class="modal__circl modal__milkShake"></span>
+          <p class="modal__text">milkshake</p>
+          <div class="modal__shape modal__milkShake"></div>
+        </li>
+      </ul>
 
-        <p class="modal__text">milkshake</p>
-        <div class="modal__shape modal__milkShake"></div>
-      </li>
-    </ul>
+      <form class="modal__form" name="modal-form" autocomplete="off">
+        <label class="modal__input-label">
+          <input
+            class="modal__form-input modal__input-div"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+        </label>
 
-    <form class="modal__form" name="modal-form" autocomplete="off">
-      <label class="modal__input-label">
-        <input
-          class="modal__form-input modal__input-div"
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
-      </label>
+        <label class="modal__input-label">
+          <input
+            class="modal__form-input modal__input-div"
+            type="tel"
+            name="tel"
+            placeholder="Phone"
+            required
+          />
+        </label>
 
-      <label class="modal__input-label">
-        <input
-          class="modal__form-input modal__input-div"
-          type="tel"
-          name="tel"
-          placeholder="Phone"
-          required
-        />
-      </label>
+        <label class="modal__input-label">
+          <!-- <div class="modal__input-textarea"> -->
+          <textarea
+            class="modal__form-input modal__input-textarea"
+            name="comment"
+            rows="3"
+            placeholder="Comment"
+            required
+          ></textarea>
+          <!-- </div> -->
+        </label>
 
-      <label class="modal__input-label">
-        <!-- <div class="modal__input-textarea"> -->
-        <textarea
-          class="modal__form-input modal__input-textarea"
-          name="comment"
-          rows="3"
-          placeholder="Comment"
-          required
-        ></textarea>
-        <!-- </div> -->
-      </label>
+        <div class="modal__button-container">
+          <button class="modal__button" type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- -------------------- HOW IT`S MADE -------------------- -->
+
+  <div class="modal modal__how-its-made" data-modal="2">
+    <button class="modal__button-close js-modal-close" data-modal-close>
+      <svg width="16" height="17" viewBox="0 0 16 17">
+        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+      </svg>
+    </button>
+
+    <div class="modal__container" role="group">
+      <p class="modal__title">How it’s made?</p>
+
+      <button class="modal__about-us-video-zone">
+        <svg aria-hidden="true" viewBox="0 0 36 36">
+          <use
+            href="./images/modal/symbol-defs.svg#icon-modal-how-it-works-play"
+          ></use>
+        </svg>
+      </button>
+
+      <p class="modal__about-us-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      </p>
+    </div>
+  </div>
+
+  <!-- -------------------- Our Location -------------------- -->
+
+  <div class="modal modal__our-location" data-modal="3">
+    <button class="modal__button-close js-modal-close" data-modal-close>
+      <svg width="16" height="17" viewBox="0 0 16 17">
+        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+      </svg>
+    </button>
+
+    <div class="modal__container" role="group">
+      <p class="modal__title">Our Location</p>
+
+      <div class="modal__our-location-map">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/modal/map-modal-tabletDesktop.jpg    1x,
+              ./images/modal/map-modal-tabletDesktop@2x.jpg 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ./images/modal/map-modal-mobile.jpg    1x,
+              ./images/modal/map-modal-mobile@2x.jpg 2x
+            "
+          />
+          <img src="./images/modal/map-modal-tabletDesktop.jpg" alt="map" />
+        </picture>
+      </div>
 
       <div class="modal__button-container">
         <button class="modal__button" type="submit">submit</button>
       </div>
-    </form>
-  </div>
-</div>
-
-<!-- -------------------- HOW IT`S MADE -------------------- -->
-
-<div class="modal" data-modal="2">
-  <button class="modal__button-close js-modal-close" data-modal-close>
-    <svg width="16" height="17" viewBox="0 0 16 17">
-      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
-    </svg>
-  </button>
-
-  <div class="modal__container" role="group">
-    <p class="modal__title">Read more</p>
-
-    <button class="modal__about-us-video-zone">
-      <svg aria-hidden="true" viewBox="0 0 36 36">
-        <use
-          href="./images/modal/symbol-defs.svg#icon-modal-how-it-works-play"
-        ></use>
-      </svg>
-    </button>
-
-    <p class="modal__about-us-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    </p>
+    </div>
   </div>
 </div>
