@@ -372,3 +372,48 @@ ul {
     transition: stroke 0.25s;
   }
 }
+
+// modal about us styles
+
+.modal__about-us-text {
+  font-family: $main-ff;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: $black-text-color;
+}
+
+.modal__about-us-video-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  width: 100%;
+
+  background-color: $black-text-color;
+  margin-bottom: 30px;
+  border: 0px;
+  border-radius: 10px;
+  fill: $white-text-color;
+
+  transition: background-color $duratoin $timing-function,
+    color $duratoin $timing-function, fill $duratoin $timing-function;
+
+  &:hover {
+    color: $accent-color;
+    background-color: $tab-menu-bg-color;
+
+    fill: $accent-color;
+  }
+
+  & svg {
+    width: 27.3px;
+    height: 27.3px;
+
+    &:hover {
+      fill: currentColor;
+    }
+  }
+}
