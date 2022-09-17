@@ -1,18 +1,94 @@
 .hero {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 239px;
   &__title {
     max-width: 274px;
     font-family: 'Seymour One';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
-    line-height: 33px;
+    line-height: 1.27;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #fcfcfc;
+    & .pos {
+      font-size: 34px;
+      line-height: 0.97;
+    }
   }
 
-  &__ice {
+  &__list {
+    display: flex;
+    margin-top: 32px;
+    .hero__item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__btn {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+    border: 2px solid #f8d24e;
+    border-radius: 8px;
+  }
+
+  &__link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #f8d24e;
+    border: none;
+  }
+
+  //   background: url(../images/hero/ice-face.png) no-repeat bottom 98px left 107px,
+  //     url(../images/hero/ice-face-2.png) no-repeat bottom 125px left 153px,
+  //     url(../images/hero/ice-face-3.png) no-repeat bottom 50px left 159px,
+  //     url(../images/hero/ice-cream-mobile-1x.png) no-repeat bottom left 82px;
+
+  .list__ice {
     position: absolute;
     bottom: 0;
+    left: 81px;
+  }
+  .list__face {
+    position: absolute;
+  }
+  .list__face:nth-child(2) {
+    bottom: 98;
+    left: 107;
+  }
+  .list__face:nth-child(3) {
+    bottom: 125;
+    left: 153;
+  }
+  .list__face:nth-child(4) {
+    bottom: 50;
+    left: 159;
   }
 }
