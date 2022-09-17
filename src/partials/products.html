@@ -1,87 +1,191 @@
 <section class="section__products">
-  <label for="suptitle" class="section__label"></label>
-  <h2 class="section__title">products</h2>
-  <ul class="list">
-    <li class="list__item">
-      <img
-        class="list__img"
-        src="./src/images/mobile/product-mob1.jpg"
-        alt="ice cream"
-        width="300px"
-        height="300px"
-      />
-      <h3 class="list__title">ice cream</h3>
-      <p class="list__text">
-        Soft ice cream with a delicate taste. Made with milk, cream, sugar and
-        natural stabilizer
-      </p>
-      <button class="list__button" type="button">
-        <svg
-          class="button-icon"
-          width="40"
-          height="15"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
-            fill="#131313"
+  <div class="container">
+    <label for="suptitle" class="section__label">Коментар</label>
+    <h2 class="section__title">products</h2>
+    <div class="section__cards">
+      <div class="section__card">
+        <picture>
+          <source
+            srcset="../images/products/desktop/product1.webp1x
+                            ../images/products/desktop/product1-2.webp 2x"
+            media="(min-width:1200px)"
+            type="image/webp"
           />
-        </svg>
-      </button>
-    </li>
-    <li class="list__item">
-      <img
-        class="list__img"
-        src="./src/images/mobile/product-mob2.jpg"
-        alt="ice cream"
-        width="300px"
-        height="300px"
-      />
-      <h3 class="list__title">ice coffee</h3>
-      <p class="list__text">
-        Fragrant invigorating drink created from 100% natural ingredients
-        without the use of preservatives and flavor enhancers
-      </p>
-      <button class="list__button" type="button">
-        <svg
-          class="button-icon"
-          width="40"
-          height="15"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
-            fill="#131313"
+          <source
+            srcset="../images/products/desktop/product1.jpg 1x
+                            ../images/products/desktop/product1-2.jpg 2x"
+            media="(min-width:1200px)"
           />
-        </svg>
-      </button>
-    </li>
-    <li class="list__item">
-      <img
-        class="list__img"
-        src="./src/images/mobile/product-mob3.jpg"
-        alt="ice cream"
-        width="300px"
-        height="300px"
-      />
-      <h3 class="list__title">milkshakes</h3>
-      <p class="list__text">
-        Sweet drinks based on milk and ice cream, supplemented with syrups,
-        fruits, berries and other sweets of your choice
-      </p>
-      <button class="list__button" type="button">
-        <svg
-          class="button-icon"
-          width="40"
-          height="15"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
-            fill="#131313"
+          <source
+            srcset="../images/products/tablet/product-tab1.webp 1x
+                            ../images/products/tablet/product-tab1-2.webp 2x"
+            media="(min-width:768px)"
+            type="image/webp"
           />
-        </svg>
-      </button>
-    </li>
-  </ul>
+          <source
+            srcset="../images/products/tablet/product-tab1.jpg 1x
+                            ../images/products/tablet/product-tab1-2.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob1.webp 1x
+                            ../images/products/mobile/product-mob1-2.webp 2x"
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob1.jpg 1x
+                            ../images/products/mobile/product-mob3-2.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            src="../images/products/mobile/product-mob1.jpg"
+            alt=""
+            width=""
+            height=""
+          />
+        </picture>
+        <h3 class="card__title">ice cream</h3>
+        <p class="card__text">
+          Soft ice cream with a delicate taste. Made with milk, cream, sugar and
+          natural stabilizer
+        </p>
+        <button class="card__button" type="button">
+          <svg
+            class="button-icon"
+            width="40"
+            height="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
+              fill="#131313"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="section__card">
+        <picture>
+          <source
+            srcset="../images/products/desktop/product2.webp1x
+                            ../images/products/desktop/product2-2.webp2x"
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/desktop/product2.jpg 1x
+                            ../images/products/desktop/product2-2.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="../images/products/tablet/product-tab2.webp 1x
+                            ../images/products/tablet/product-tab2-2.webp 2x"
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/tablet/product-tab2.jpg 1x
+                            ../images/products/tablet/product-tab2-2.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob2.webp1x
+                            ../images/products/mobile/product-mob2-2.webp2x"
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob2.jpg 1x
+                            ../images/products/mobile/product-mob2-2.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            src="../images/products/mobile/product-mob2.jpg"
+            alt=""
+            width=""
+            height=""
+          />
+        </picture>
+        <h3 class="card__title">ice coffee</h3>
+        <p class="card__text">
+          Fragrant invigorating drink created from 100% natural ingredients
+          without the use of preservatives and flavor enhancers
+        </p>
+        <button class="card__button" type="button">
+          <svg
+            class="button-icon"
+            width="40"
+            height="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
+              fill="#131313"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="section__card">
+        <picture>
+          <source
+            srcset="../images/products/desktop/product3.webp 1x
+                            ../images/products/desktop/product3-2.webp 2x"
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/desktop/product3.jpg 1x
+                            ../images/products/desktop/product3-2.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="../images/products/tablet/product-tab3.webp 1x
+                            ../images/products/tablet/product-tab3-2.webp 2x"
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/tablet/product-tab3.jpg 1x
+                            ../images/products/tablet/product-tab3-2.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob3.webp 1x
+                            ../images/products/mobile/product-mob3-2.webp 2x"
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../images/products/mobile/product-mob3.jpg 1x
+                            ../images/products/mobile/product-mob3-2.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            src="../images/products/mobile/product-mob3.jpg"
+            alt=""
+            width=""
+            height=""
+          />
+        </picture>
+        <h3 class="card__title">milkshakes</h3>
+        <p class="card__text">
+          Sweet drinks based on milk and ice cream, supplemented with syrups,
+          fruits, berries and other sweets of your choice
+        </p>
+        <button class="card__button" type="button">
+          <svg
+            class="button-icon"
+            width="40"
+            height="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.3212 8.59578C41.7117 8.20525 41.7117 7.57209 41.3212 7.18157L34.9572 0.817604C34.5667 0.42708 33.9336 0.42708 33.543 0.817604C33.1525 1.20813 33.1525 1.84129 33.543 2.23182L39.1999 7.88867L33.543 13.5455C33.1525 13.9361 33.1525 14.5692 33.543 14.9597C33.9336 15.3503 34.5667 15.3503 34.9572 14.9597L41.3212 8.59578ZM0.379395 8.88867H40.6141V6.88867H0.379395V8.88867Z"
+              fill="#131313"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
