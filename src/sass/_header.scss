@@ -1,0 +1,8 @@
+.header {
+background-color: $main-bg-color;
+.nav {
+    @media screen and (max-width:1199px) {
+    display: none;
+    }
+}
+}
