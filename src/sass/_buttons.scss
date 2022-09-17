@@ -1,0 +1,176 @@
+.products-button {
+  font-family: $main-ff;
+  @include font(600, 8px, 1.25, null);
+  color: #000000;
+  width: 62px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  border-radius: 8px;
+  transition: color $timing-function $duratoin,
+    border $timing-function $duratoin;
+  @include desktop {
+    font-size: 14px;
+    font-weight: 1.28;
+    width: 134px;
+    height: 42px;
+    border-radius: 10px;
+  }
+  &:hover {
+    border: 2px solid $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
+}
+
+.read-more-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.28, null);
+  color: #000000;
+  fill: currentColor;
+  width: 164px;
+  height: 42px;
+  display: flex;
+  gap: 4.82px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  &:hover {
+    background: $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
+
+.our-locations-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.28, null);
+  color: #000000;
+  fill: currentColor;
+  width: 196px;
+  height: 42px;
+  display: flex;
+  gap: 6.02px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  &:hover {
+    background: $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
+
+.buy-now-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.2, null);
+  color: #000000;
+  fill: currentColor;
+  width: 152px;
+  height: 42px;
+  display: flex;
+  gap: 7.23px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  &:hover {
+    background: $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
+
+.franchise-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.28, null);
+  color: #000000;
+  fill: currentColor;
+  width: 196px;
+  height: 42px;
+  display: flex;
+  gap: 5.73px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  border-radius: 8px;
+  transition: color $timing-function $duratoin,
+    border $timing-function $duratoin;
+  &:hover {
+    border: 2px solid $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
+}
+
+.submit-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.2, null);
+  color: #000000;
+  width: 132px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  &:hover {
+    background: $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
