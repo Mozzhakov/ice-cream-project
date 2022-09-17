@@ -1,0 +1,19 @@
+.hero {
+  &__title {
+    max-width: 274px;
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fcfcfc;
+  }
+
+  &__ice {
+    position: absolute;
+    bottom: 0;
+    background: rgba(252, 252, 252, 0.44);
+  }
+}
