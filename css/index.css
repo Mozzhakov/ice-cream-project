@@ -91,47 +91,6 @@ body {
   margin: -1px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-Потрібно відкривати .list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: "Montserrat", "Seymour One", sans-serif;
-}
-
-.link {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-.container {
-  margin: 0 auto;
-  width: 1200px;
-  padding: 0px 15px;
-}
-
 .test-buttons {
   height: auto;
   display: flex;
