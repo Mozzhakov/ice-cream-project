@@ -4,6 +4,7 @@
   color: #000000;
   width: 62px;
   height: 24px;
+  padding: 12px 34px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -36,9 +37,10 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.28, null);
   color: #000000;
-  fill: currentColor;
+  stroke: currentColor;
   width: 164px;
   height: 42px;
+  padding: 12px 34px;
   display: flex;
   gap: 4.82px;
   align-items: center;
@@ -65,9 +67,10 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.28, null);
   color: #000000;
-  fill: currentColor;
+  stroke: currentColor;
   width: 196px;
   height: 42px;
+  padding: 12px 34px;
   display: flex;
   gap: 6.02px;
   align-items: center;
@@ -94,9 +97,10 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.2, null);
   color: #000000;
-  fill: currentColor;
+  stroke: currentColor;
   width: 152px;
   height: 42px;
+  padding: 12px 34px;
   display: flex;
   gap: 7.23px;
   align-items: center;
@@ -123,9 +127,10 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.28, null);
   color: #000000;
-  fill: currentColor;
+  stroke: currentColor;
   width: 196px;
   height: 42px;
+  padding: 12px 46px;
   display: flex;
   gap: 5.73px;
   align-items: center;
@@ -152,8 +157,10 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.2, null);
   color: #000000;
-  width: 132px;
+  width: 114px;
+  // 132x42 для каждого мороженка
   height: 42px;
+  padding: 12px 34px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -164,6 +171,39 @@
   border-radius: 10px;
   transition: color $timing-function $duratoin,
     background-color $timing-function $duratoin;
+  @include desktop {
+    width: 121px;
+  }
+  &:hover {
+    background: $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
+  }
+}
+.open-map-button {
+  font-family: $main-ff;
+  @include font(600, 14px, 1.2, null);
+  color: #000000;
+  width: 134px;
+  height: 42px;
+  padding: 12px 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  @include desktop {
+    width: 145px;
+  }
   &:hover {
     background: $hover-green-color;
   }
