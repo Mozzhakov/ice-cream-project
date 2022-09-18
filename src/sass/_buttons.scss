@@ -1,0 +1,85 @@
+.main-button {
+  @include font(600, 14px, 1.2, null);
+  padding: 12px 34px;
+  font-family: $main-ff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $black-text-color;
+  background-color: $accent-color;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    background-color $timing-function $duratoin;
+  &:hover {
+    background: $hover-green-color;
+  }
+
+  &:focus {
+    color: $white-text-color;
+    background: $hover-green-color;
+  }
+
+  &:disabled {
+    background: $disabled-color;
+  }
+}
+
+.products-button {
+  @include font(600, 8px, 1.25, null);
+  padding: 5px 10px;
+  font-family: $main-ff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $black-text-color;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  outline: none;
+  border-radius: 8px;
+  transition: color $timing-function $duratoin,
+    border $timing-function $duratoin;
+  &:hover {
+    border: 2px solid $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+    border: 2px solid $hover-green-color;
+  }
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+    padding: 12px 34px;
+    border-radius: 10px;
+  }
+}
+
+.franch-button {
+  @include font(600, 14px, 1.2, null);
+  padding: 12px 46px;
+  font-family: $main-ff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $black-text-color;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  outline: none;
+  border-radius: 10px;
+  transition: color $timing-function $duratoin,
+    border $timing-function $duratoin;
+  &:hover {
+    border: 2px solid $hover-green-color;
+  }
+  &:focus {
+    color: $white-text-color;
+    border: 2px solid $hover-green-color;
+  }
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
+}
