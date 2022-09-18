@@ -15,6 +15,7 @@
     & .pos {
       font-size: 34px;
       line-height: 0.97;
+      letter-spacing: 0;
     }
   }
 
@@ -23,53 +24,40 @@
     margin-top: 32px;
     .hero__item:not(:last-child) {
       margin-right: 8px;
+      @include desktop {
+        margin-right: 12px;
+      }
     }
   }
 
-  &__btn {
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-
-    border: 2px solid #f8d24e;
-    border-radius: 8px;
-  }
-
   &__link {
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
+    @include font(600, 8px, 1.25, null);
+    padding: 5px 10px;
+    font-family: $main-ff;
     display: flex;
     align-items: center;
     text-align: center;
-    text-decoration-line: underline;
-    color: #f8d24e;
-    border: none;
+    color: $accent-color;
+    background-color: transparent;
+    outline: none;
+    text-decoration: underline;
+    transition: color $timing-function $duratoin;
+    &:hover {
+      color: $hover-green-color;
+    }
+    &:focus {
+      color: $white-text-color;
+    }
+    &:disabled {
+      color: $disabled-color;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.21;
+      padding: 12px 22px;
+      border-radius: 10px;
+    }
   }
-
-  //   background: url(../images/hero/ice-face.png) no-repeat bottom 98px left 107px,
-  //     url(../images/hero/ice-face-2.png) no-repeat bottom 125px left 153px,
-  //     url(../images/hero/ice-face-3.png) no-repeat bottom 50px left 159px,
-  //     url(../images/hero/ice-cream-mobile-1x.png) no-repeat bottom left 82px;
 
   .list__ice {
     position: absolute;
@@ -123,6 +111,23 @@
   @include tablet {
     padding-top: 104px;
     padding-bottom: 13px;
+
+    &__title {
+      max-width: 181px;
+      font-family: 'Seymour One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      text-transform: uppercase;
+
+      color: #fcfcfc;
+      & .pos {
+        font-size: 24px;
+        line-height: 0.54;
+      }
+    }
+
     .hero__top {
       display: flex;
       justify-content: space-between;
@@ -136,14 +141,21 @@
     .ellipse-mob {
       display: none;
     }
+
+    .plate-desktop {
+      display: none;
+    }
     .about-icecream {
       display: flex;
       align-items: center;
       margin-top: 28px;
-      img {
+      .plate-tablet {
         width: 152px;
         height: 152px;
         margin-right: 33px;
+        @include desktop {
+          display: none;
+        }
       }
       p {
         max-width: 151px;
@@ -154,18 +166,20 @@
         line-height: 1.42;
 
         color: #fcfcfc;
-      }
-    }
 
-    .blur-tablet {
-      position: absolute;
-      bottom: 0;
-      right: 80px;
-      z-index: -1;
+        @include desktop {
+          font-size: 14px;
+          line-height: 1.43;
+          max-width: 200px;
+        }
+      }
     }
 
     .ice__list-tablet {
       display: block;
+      @include desktop {
+        display: none;
+      }
     }
 
     .list__ice-tablet {
@@ -193,10 +207,16 @@
     .arrow-icon {
       margin-top: 12px;
       display: block;
+      @include desktop {
+        margin-top: 24px;
+      }
     }
 
     .ellipse-tablet {
       display: block;
+      @include desktop {
+        display: none;
+      }
     }
 
     .ellipse-tablet-left {
@@ -235,6 +255,32 @@
         vertical-align: top;
         color: #fcfcfc;
       }
+    }
+  }
+  @include desktop {
+    padding-top: 118px;
+    padding-bottom: 65px;
+
+    &__title {
+      min-width: 367px;
+      font-family: 'Seymour One';
+      @include font(400, 38px, 1.26, 0.04em);
+      text-transform: uppercase;
+
+      color: #fcfcfc;
+      & .pos {
+        font-size: 38px;
+        line-height: 1.26;
+      }
+    }
+
+    .about-icecream {
+      margin-top: 42px;
+    }
+
+    .plate-desktop {
+      margin-right: 14px;
+      display: block;
     }
   }
 }
