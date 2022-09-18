@@ -101,3 +101,10 @@ const removeClassListStyle = () => {
   overlay.style.justifyContent = '';
   overlay.style.paddingTop = '';
 };
+
+document
+  .querySelector('button.extras__scroll-to-top')
+  .addEventListener('click', e => {
+    console.log('click');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
