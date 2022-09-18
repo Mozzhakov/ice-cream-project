@@ -1,5 +1,7 @@
 // Мобільне меню
 .container-mob {
+  padding-left: 22px;
+  padding-right: 22px;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
@@ -11,24 +13,24 @@
     width: 480px;
   }
 }
-.menu-btn--open {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  @include tablet {
-    position: absolute;
-    top: 29px;
-    right: 216px;
-  }
-  @include desktop {
-    display: none;
-  }
-}
+// .menu-btn--open {
+//   position: absolute;
+//   top: 16px;
+//   right: 20px;
+//   margin: 0;
+//   margin-left: auto;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+//   @include tablet {
+//     position: absolute;
+//     top: 29px;
+//     right: 216px;
+//   }
+//   @include desktop {
+//     display: none;
+//   }
+// }
 .menu-btn--close {
   position: absolute;
   top: 16px;
@@ -39,6 +41,10 @@
   border: none;
   background-color: transparent;
   transition: fill $duratoin $timing-function;
+  @include tablet {
+    top: 32px;
+    right: 32px;
+  }
   &:hover,
   &:focus {
     cursor: pointer;
@@ -58,7 +64,8 @@
   height: 100%;
   padding-top: 100px;
   padding-bottom: 63px;
-  transition: $duratoin $timing-function;
+  transform: translateX(0);
+  transition: transform $duratoin $timing-function;
   &__list {
     display: flex;
     flex-direction: column;
@@ -82,6 +89,17 @@
   &__link--current {
     color: $black-text-color;
   }
+  &__logo {
+    position: absolute;
+    top: 12px;
+    left: 31px;
+    width: 40px;
+    @include tablet {
+      top: 20px;
+      left: 32px;
+      width: 48px;
+    }
+  }
 }
 .mob-menu-btn {
   display: flex;
@@ -92,4 +110,12 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transform: translateX(100%);
+  transition: transform $duratoin $timing-function;
+}
+
+.buy-now-btn {
+  @include tablet {
+    display: none;
+  }
 }
