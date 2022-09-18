@@ -2,9 +2,7 @@
   font-family: $main-ff;
   @include font(600, 8px, 1.25, null);
   color: #000000;
-  width: 62px;
-  height: 24px;
-  padding: 12px 34px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -12,24 +10,26 @@
   cursor: pointer;
   background-color: transparent;
   border: 2px solid $accent-color;
+  outline: none;
   border-radius: 8px;
   transition: color $timing-function $duratoin,
     border $timing-function $duratoin;
-  @include desktop {
-    font-size: 14px;
-    font-weight: 1.28;
-    width: 134px;
-    height: 42px;
-    border-radius: 10px;
-  }
+
   &:hover {
     border: 2px solid $hover-green-color;
   }
   &:focus {
     color: $white-text-color;
+    border: 2px solid $hover-green-color;
   }
   &:disabled {
     border: 2px solid $disabled-color;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+    padding: 12px 34px;
+    border-radius: 10px;
   }
 }
 
@@ -68,8 +68,6 @@
   @include font(600, 14px, 1.28, null);
   color: #000000;
   stroke: currentColor;
-  width: 196px;
-  height: 42px;
   padding: 12px 34px;
   display: flex;
   gap: 6.02px;
@@ -98,8 +96,6 @@
   @include font(600, 14px, 1.2, null);
   color: #000000;
   stroke: currentColor;
-  width: 152px;
-  height: 42px;
   padding: 12px 34px;
   display: flex;
   gap: 7.23px;
@@ -108,6 +104,7 @@
   justify-content: center;
   cursor: pointer;
   background-color: $accent-color;
+  outline: none;
   border: none;
   border-radius: 10px;
   transition: color $timing-function $duratoin,
@@ -117,6 +114,7 @@
   }
   &:focus {
     color: $white-text-color;
+    background: $hover-green-color;
   }
   &:disabled {
     background-color: $disabled-color;
@@ -128,8 +126,6 @@
   @include font(600, 14px, 1.28, null);
   color: #000000;
   stroke: currentColor;
-  width: 196px;
-  height: 42px;
   padding: 12px 46px;
   display: flex;
   gap: 5.73px;
@@ -139,7 +135,8 @@
   cursor: pointer;
   background-color: transparent;
   border: 2px solid $accent-color;
-  border-radius: 8px;
+  outline: none;
+  border-radius: 10px;
   transition: color $timing-function $duratoin,
     border $timing-function $duratoin;
   &:hover {
@@ -147,6 +144,7 @@
   }
   &:focus {
     color: $white-text-color;
+    border: 2px solid $hover-green-color;
   }
   &:disabled {
     border: 2px solid $disabled-color;
@@ -157,9 +155,6 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.2, null);
   color: #000000;
-  width: 114px;
-  // 132x42 для каждого мороженка
-  height: 42px;
   padding: 12px 34px;
   display: flex;
   align-items: center;
@@ -168,12 +163,10 @@
   cursor: pointer;
   background-color: $accent-color;
   border: none;
+  outline: none;
   border-radius: 10px;
   transition: color $timing-function $duratoin,
     background-color $timing-function $duratoin;
-  @include desktop {
-    width: 121px;
-  }
   &:hover {
     background: $hover-green-color;
   }
@@ -188,8 +181,6 @@
   font-family: $main-ff;
   @include font(600, 14px, 1.2, null);
   color: #000000;
-  width: 134px;
-  height: 42px;
   padding: 12px 34px;
   display: flex;
   align-items: center;
@@ -198,12 +189,10 @@
   cursor: pointer;
   background-color: $accent-color;
   border: none;
+  outline: none;
   border-radius: 10px;
   transition: color $timing-function $duratoin,
     background-color $timing-function $duratoin;
-  @include desktop {
-    width: 145px;
-  }
   &:hover {
     background: $hover-green-color;
   }
