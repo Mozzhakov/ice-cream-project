@@ -19,6 +19,8 @@ ul {
   visibility: hidden;
 
   position: fixed;
+  overflow-y: scroll;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -26,6 +28,11 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
   transition: 0.3s all;
+
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
 }
 
 // --------------- MODAL STYLES ------------------------
@@ -39,9 +46,10 @@ ul {
 
   // modal styles
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // margin-top: 15%;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   width: 100%;
   max-width: 280px;
   height: auto;
@@ -316,4 +324,148 @@ ul {
 
 .modal__button-container {
   margin: 16px auto;
+}
+
+// modal about us styles
+
+.modal__how-its-made {
+  .modal__title {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .modal__about-us-text {
+    font-family: $main-ff;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: $black-text-color;
+  }
+
+  .modal__about-us-video-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    width: 100%;
+
+    background-color: $black-text-color;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 10px;
+    fill: $white-text-color;
+
+    transition: background-color $duratoin $timing-function,
+      color $duratoin $timing-function, fill $duratoin $timing-function;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      color: $accent-color;
+      background-color: $tab-menu-bg-color;
+
+      fill: $accent-color;
+    }
+
+    & svg {
+      width: 27.3px;
+      height: 27.3px;
+
+      &:hover {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+// ------------ MODAL OUR LOCATIONS
+
+.modal__our-location {
+  & .modal__container {
+    padding: 28px;
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 60px;
+    }
+  }
+
+  & .modal__title {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+  & .modal__button-container {
+    margin: 24px 0 0 0;
+
+    @media screen and (min-width: 768px) {
+      margin: 32px 0 0 0;
+    }
+  }
+}
+
+.modal__our-location-map {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  width: 100%;
+
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  & > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.extras__scroll-to-top {
+  padding: 5px;
+  height: 50px;
+  width: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: $secondary-ff;
+  cursor: pointer;
+  z-index: 100;
+
+  background-color: $accent-color;
+  border: 0px;
+  border-radius: 50px;
+
+  animation: extras__scroll-to-top 1s linear infinite both;
+}
+
+@keyframes extras__scroll-to-top {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
