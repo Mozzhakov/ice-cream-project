@@ -1,21 +1,62 @@
 <section class="header">
   <div class="container">
     <logo class="logo">
-      <img src="./images/header/logo.png" alt="Зображення морозива" />
+      <picture>
+        <source
+          srcset="
+            ./images/header/logo-desktop-1x.png 1x,
+            ./images/header/logo-desktop-2x.png 2x
+          "
+          media="(min-width:1200px"
+        />
+
+        <source
+          srcset="
+            ./images/header/logo-tablet-1x.png 1x,
+            ./images/header/logo-tablet-2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/header/logo-mobile-1x.png 1x,
+            ./images/header/logo-mobile-2x.png 2x
+          "
+          media="(max-width:767px)"
+        />
+        <img
+          src="./images/header/logo-desktop-1x.png"
+          alt="Зображення морозива"
+          width="60"
+          ;
+          height="65"
+          ;
+        />
+      </picture>
     </logo>
     <nav class="nav">
       <ul class="list">
-        <li class="item">Home</li>
-        <li class="item">How it’s made?</li>
-        <li class="item">Our products</li>
-        <li class="item">Contact</li>
+        <li class="item">
+          <a class="link">Home</a>
+        </li>
+        <li class="item">
+          <a class="link">How it’s made?</a>
+        </li>
+        <li class="item">
+          <a class="link">Our products</a>
+        </li>
+        <li class="item">
+          <a class="link">Contact</a>
+        </li>
       </ul>
     </nav>
-    <button type="button" class="#">
-      <svg class="menu-open" width="32" height="32">
-        <use href="./images/header/icon.svg#icon-menu-open"></use>
-      </svg>
-    </button>
-    <button type="button" class="#">Buy now</button>
+    <div class="position">
+      <button type="button" class="menu-btn menu-btn--open">
+        <svg class="menu-btn__icon" width="32" height="32">
+          <use href="./images/header/icon.svg#icon-menu-open"></use>
+        </svg>
+      </button>
+      <button type="button" class="btn-buy">Buy now</button>
+    </div>
   </div>
 </section>

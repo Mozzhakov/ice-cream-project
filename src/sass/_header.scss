@@ -1,8 +1,56 @@
 .header {
 background-color: $main-bg-color;
+
+.container {
+    display: flex;
+    align-items: center;   
+}
+.logo {
+    margin-top: 12px;
+}
 .nav {
     @media screen and (max-width:1199px) {
     display: none;
     }
 }
+.list {
+    display: flex;
+}
+.item:not(:last-child) {
+    margin-right: 27px;
+}
+
+.menu-btn {
+    border: none;
+    background-color: transparent;
+    @media screen and (max-width:767px) {
+            margin-top: 16px;
+        } 
+        @include tablet {
+        margin-right: 32px;
+        }
+        
+    @include desktop {
+        display: none;
+    }
+}
+
+.btn-buy {
+    @media screen and (max-width:767px) {
+    display: none;
+    } 
+    @include desktop {
+        margin-left: auto;
+    }
+    
+}
+
+.position {
+    margin-left: auto; 
+@include tablet {
+margin-left: auto;
+}
+}
+
+
 }
