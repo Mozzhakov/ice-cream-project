@@ -19,6 +19,8 @@ ul {
   visibility: hidden;
 
   position: fixed;
+  overflow-y: scroll;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -26,6 +28,11 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
   transition: 0.3s all;
+
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
 }
 
 // --------------- MODAL STYLES ------------------------
@@ -39,9 +46,10 @@ ul {
 
   // modal styles
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // margin-top: 15%;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   width: 100%;
   max-width: 280px;
   height: auto;
@@ -318,57 +326,146 @@ ul {
   margin: 16px auto;
 }
 
-.modal__button {
-  padding: 12px 34px;
+// modal about us styles
 
-  font-family: $main-ff;
+.modal__how-its-made {
+  .modal__title {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
 
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.25;
+  .modal__about-us-text {
+    font-family: $main-ff;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.4;
+
+    color: $black-text-color;
+  }
+
+  .modal__about-us-video-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    width: 100%;
+
+    background-color: $black-text-color;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 10px;
+    fill: $white-text-color;
+
+    transition: background-color $duratoin $timing-function,
+      color $duratoin $timing-function, fill $duratoin $timing-function;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      color: $accent-color;
+      background-color: $tab-menu-bg-color;
+
+      fill: $accent-color;
+    }
+
+    & svg {
+      width: 27.3px;
+      height: 27.3px;
+
+      &:hover {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+// ------------ MODAL OUR LOCATIONS
+
+.modal__our-location {
+  & .modal__container {
+    padding: 28px;
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 60px;
+    }
+  }
+
+  & .modal__title {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+  & .modal__button-container {
+    margin: 24px 0 0 0;
+
+    @media screen and (min-width: 768px) {
+      margin: 32px 0 0 0;
+    }
+  }
+}
+
+.modal__our-location-map {
   display: flex;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
 
-  color: $black-text-color;
+  position: relative;
+
+  width: 100%;
+
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  & > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.extras__scroll-to-top {
+  padding: 5px;
+  height: 50px;
+  width: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: $secondary-ff;
+  cursor: pointer;
+  z-index: 100;
 
   background-color: $accent-color;
+  border: 0px;
+  border-radius: 50px;
 
-  border: 0px solid $accent-color;
-  border-radius: 10px;
-  color: $black-text-color;
+  animation: extras__scroll-to-top 1s linear infinite both;
+}
 
-  &:hover {
-    background: $hover-green-color;
-    border: 0px solid $hover-green-color;
+@keyframes extras__scroll-to-top {
+  0% {
+    transform: translate(0);
   }
-
-  &:focus {
-    color: $white-text-color;
-    background: $hover-green-color;
-    border: 0px solid $hover-green-color;
+  20% {
+    transform: translate(-2px, 2px);
   }
-
-  &:disabled {
-    background: $disabled-color;
-    border: 0px solid $disabled-color;
+  40% {
+    transform: translate(-2px, -2px);
   }
-
-  & .modal__button-icon {
-    position: relative;
-    top: 0.125em;
-
-    flex-shrink: 0;
-
-    height: 1em;
-    width: 1em;
-
-    transition: stroke 0.25s;
+  60% {
+    transform: translate(2px, 2px);
   }
-
-  & #modal__botton-icon-path {
-    stroke: currentColor;
-
-    transition: stroke 0.25s;
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
