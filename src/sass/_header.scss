@@ -3,10 +3,21 @@ background-color: $main-bg-color;
 
 .container {
     display: flex;
-    align-items: center;   
+    align-items: center; 
+    @include desktop {
+        justify-content: space-between;
+    }  
 }
 .logo {
-    margin-top: 12px;
+    @media screen and (max-width:767px) {
+        margin-top: 12px;
+    }
+    @include tablet {
+    margin-top: 20px;
+    }
+    @include desktop {
+        margin-top: 8px;
+    }
 }
 .nav {
     @media screen and (max-width:1199px) {
@@ -15,6 +26,7 @@ background-color: $main-bg-color;
 }
 .list {
     display: flex;
+    margin-left: 32px;
 }
 .item:not(:last-child) {
     margin-right: 27px;
@@ -23,9 +35,6 @@ background-color: $main-bg-color;
 .menu-btn {
     border: none;
     background-color: transparent;
-    @media screen and (max-width:767px) {
-            margin-top: 16px;
-        } 
         @include tablet {
         margin-right: 32px;
         }
@@ -35,7 +44,34 @@ background-color: $main-bg-color;
     }
 }
 
-.btn-buy {
+.main-button {
+            @include font(600, 14px, 1.2, null);
+            padding: 12px 34px;
+            font-family: $main-ff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $black-text-color;
+            background-color: $accent-color;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            transition: color $timing-function $duratoin,
+                background-color $timing-function $duratoin;
+    
+            &:hover {
+                background: $hover-green-color;
+            }
+    
+            &:focus {
+                color: $white-text-color;
+                background: $hover-green-color;
+            }
+    
+            &:disabled {
+                background: $disabled-color;
+            }
+    
     @media screen and (max-width:767px) {
     display: none;
     } 
@@ -46,9 +82,13 @@ background-color: $main-bg-color;
 }
 
 .position {
-    margin-left: auto; 
+    @media screen and (max-width:1199px) {
+    margin-left: auto;
+    }
+    
 @include tablet {
-margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 }
 
