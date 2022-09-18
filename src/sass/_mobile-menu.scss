@@ -1,0 +1,121 @@
+// Мобільне меню
+.container-mob {
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mobile {
+    width: 480px;
+  }
+}
+// .menu-btn--open {
+//   position: absolute;
+//   top: 16px;
+//   right: 20px;
+//   margin: 0;
+//   margin-left: auto;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+//   @include tablet {
+//     position: absolute;
+//     top: 29px;
+//     right: 216px;
+//   }
+//   @include desktop {
+//     display: none;
+//   }
+// }
+.menu-btn--close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: fill $duratoin $timing-function;
+  @include tablet {
+    top: 32px;
+    right: 32px;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $hover-green-color;
+  }
+}
+.menu-btn__icon {
+  fill: $white-text-color;
+}
+.mob-menu {
+  position: fixed;
+  background-color: $mob-menu-bg-color;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 63px;
+  transform: translateX(0);
+  transition: transform $duratoin $timing-function;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: auto;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &__link {
+    @include font(700, 32px, 1.22, null);
+    color: $white-text-color;
+    @include tablet {
+      @include font(700, 48px, 1.23, null);
+    }
+  }
+  &__link--current {
+    color: $black-text-color;
+  }
+  &__logo {
+    position: absolute;
+    top: 12px;
+    left: 31px;
+    width: 40px;
+    @include tablet {
+      top: 20px;
+      left: 32px;
+      width: 48px;
+    }
+  }
+}
+.mob-menu-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: transform $duratoin $timing-function;
+}
+
+.buy-now-btn {
+  @include tablet {
+    display: none;
+  }
+}
