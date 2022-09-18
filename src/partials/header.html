@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header" id="header">
   <div class="container">
     <logo class="logo">
       <picture>
@@ -37,7 +37,7 @@
     <nav class="nav">
       <ul class="list">
         <li class="item">
-          <a href="" class="link">Home</a>
+          <a href="./index.html" class="link">Home</a>
         </li>
         <li class="item">
           <a href="" class="link">How it’s made?</a>
@@ -51,12 +51,17 @@
       </ul>
     </nav>
     <div class="position">
-      <button type="button" class="menu-btn menu-btn--open">
+      <button type="button" class="menu-btn menu-btn--open" data-menu-open>
         <svg class="menu-btn__icon" width="32" height="32">
           <use href="./images/header/icon.svg#icon-menu-open"></use>
         </svg>
       </button>
-      <button type="button" class="main-button">Buy now</button>
+      <button type="button" class="main-button">
+        <span class="main-button-title">Buy now</span>
+        <svg class="icon-btn-after" width="12" height="12">
+          <use href="./images/header/icon.svg#icon-btn-after"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
