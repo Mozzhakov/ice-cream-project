@@ -9,8 +9,27 @@
 <div class="mob-menu is-hidden" data-menu>
   <div class="container-mob">
     <a href="./index.html" class="mob-menu__logo logo"
-      ><img src="./images/header/logo.png" alt="Зображення морозива"
-    /></a>
+      ><picture
+        ><source
+          srcset="
+            ./images/header/logo-tablet-1x.png 1x,
+            ./images/header/logo-tablet-2x.png 2x
+          "
+          media="(min-width:768px)" />
+        <source
+          srcset="
+            ./images/header/logo-mobile-1x.png 1x,
+            ./images/header/logo-mobile-2x.png 2x
+          "
+          media="(max-width:767px)" />
+        <img
+          src="./images/header/logo-desktop-1x.png"
+          alt="Зображення морозива"
+          width="60"
+          ;
+          height="65"
+          ; /></picture
+    ></a>
     <button type="button" class="menu-btn menu-btn--close" data-menu-close>
       <svg class="menu-btn__icon" width="32px" height="32px">
         <use href="./images/symbol-defs.svg#icon-btn-menu-close"></use>
