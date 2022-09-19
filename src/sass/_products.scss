@@ -82,120 +82,121 @@
 		bottom: 20px;
 	}
 
-}
-
-.card-img {
-	position: relative;
-	z-index: 2;
-	border-radius: 50%;
-	width: 200.33px;
-	height: 199.68px;
-	transform: translateY(-50%);
-	align-items: center;
-
-}
-
-.products__circle {
-	z-index: 1;
-	position: absolute;
-	width: 200.33px;
-	height: 199.68px;
-	padding: 0px 40px;
-	top: 11.32px;
-	align-items: center;
-	border-radius: 50%;
-	transform: translateY(-50%);
-	margin-bottom: 20px;
 
 
-	&.products__circle--icecream {
+	.card-img {
+		position: relative;
+		z-index: 2;
+		border-radius: 50%;
+		width: 200.33px;
+		height: 199.68px;
+		transform: translateY(-50%);
+		align-items: center;
 
-		background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-		box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 	}
 
+	.products__circle {
+		z-index: 1;
+		position: absolute;
+		width: 200.33px;
+		height: 199.68px;
+		padding: 0px 40px;
+		top: 11.32px;
+		align-items: center;
+		border-radius: 50%;
+		transform: translateY(-50%);
+		margin-bottom: 20px;
 
-	&.products__circle--icecoffee {
-		background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-		box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+		&.products__circle--icecream {
+
+			background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+			box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+		}
+
+
+		&.products__circle--icecoffee {
+			background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+			box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+		}
+
+		&.products__circle--milksnakes {
+
+			background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+			box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+		}
 	}
 
-	&.products__circle--milksnakes {
-
-		background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
-		box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+	.card-img--icecream {
+		align-items: center;
+		justify-content: center;
+		z-index: 24;
+		top: 0px;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
 	}
-}
 
-.card-img--icecream {
-	align-items: center;
-	justify-content: center;
-	z-index: 24;
-	top: 0px;
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
+	.card-img--icecoffe {
+		align-items: center;
+		justify-content: center;
+		z-index: 24;
+		top: 0px;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+	}
 
-.card-img--icecoffe {
-	align-items: center;
-	justify-content: center;
-	z-index: 24;
-	top: 0px;
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
+	.card-img--milksnakes {
+		align-items: center;
+		justify-content: center;
+		z-index: 24;
+		top: 0px;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+	}
 
-.card-img--milksnakes {
-	align-items: center;
-	justify-content: center;
-	z-index: 24;
-	top: 0px;
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
+	.card__title {
+		@include font(700, 20px, 1.2, 0.04em);
+		text-align: center;
+		text-transform: uppercase;
+		color: $black-text-color;
+	}
 
-.card__title {
-	@include font(700, 20px, 1.2, 0.04em);
-	text-align: center;
-	text-transform: uppercase;
-	color: $black-text-color;
-}
+	.card__text {
+		@include font(400, 14px, 1.2, 0.04em);
+		line-height: 176%;
+		text-align: center;
+		color: $black-text-color
+	}
 
-.card__text {
-	@include font(400, 14px, 1.2, 0.04em);
-	line-height: 176%;
-	text-align: center;
-	color: $black-text-color
-}
+	.card__button {
+		background-color: transparent;
+		border: none;
+		color: $black-text-color;
+	}
 
-.card__button {
-	background-color: transparent;
-	border: none;
-	color: $black-text-color;
-}
-
-.button-icon {
-	background-color: transparent;
-	stroke: currentColor;
-	width: 42px;
-	height: 15px;
-
-
-	&:hover {
+	.button-icon {
+		background-color: transparent;
 		stroke: currentColor;
-		transform: scale(1.7);
-		/*	width: 52px;
+		width: 42px;
+		height: 15px;
+
+
+		&:hover {
+			stroke: currentColor;
+			transform: scale(1.7);
+			/*	width: 52px;
 		height: 16px;*/
-	}
+		}
 
-	&:focus {
-		stroke: currentColor;
-		transform: scale(2);
-		/*width: 55px;
+		&:focus {
+			stroke: currentColor;
+			transform: scale(2);
+			/*width: 55px;
 		height: 23px;*/
+		}
 	}
 }
 
