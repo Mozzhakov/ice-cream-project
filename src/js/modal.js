@@ -25,6 +25,8 @@
       });
 })(window.Element.prototype);
 
+let currentModalWindow;
+
 document.addEventListener('DOMContentLoaded', function () {
   /* Записываем в переменные массив элементов-кнопок и подложку.
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
@@ -47,40 +49,47 @@ document.addEventListener('DOMContentLoaded', function () {
         modalElem = document.querySelector(
           '.modal[data-modal="' + modalId + '"]'
         );
-
+      currentModalWindow = modalElem;
       /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
       overlay.classList.add('active');
 
       // Делаю динамическое изменение позиционирование модального окна в зависимости от его высоты.
-
       if (window.innerHeight < modalElem.offsetHeight) {
-        overlay.style.justifyContent = 'flex-start';
-        overlay.style.paddingTop = '50px';
+        const modalFromTop = window.pageYOffset + 30;
+
+        modalElem.style.left = ' 50%';
+        modalElem.style.transform = 'translateX(-50%)';
+        modalElem.style.position = 'absolute';
+        modalElem.style.top = `${modalFromTop}px`;
       } else {
-        overlay.style.justifyContent = 'center';
+        modalElem.style.position = 'fixed';
+        modalElem.style.top = '50%';
+        modalElem.style.left = '50%';
+        modalElem.style.transform = 'translate(-50%, -50%)';
       }
     }); // end click
   }); // end foreach
 
   closeButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
-      removeClassListStyle();
+      removeClassListStyle(currentModalWindow);
       var parentModal = this.closest('.modal');
 
       parentModal.classList.remove('active');
-      overlay.classList.remove('active');
+      // parentModal.removeAttribute('position');
+      document.querySelector('.overlay').classList.remove('active');
     });
   }); // end foreach
 
   document.body.addEventListener(
     'keyup',
     function (e) {
-      removeClassListStyle();
       var key = e.keyCode;
 
       if (key == 27) {
+        removeClassListStyle(currentModalWindow);
         document.querySelector('.modal.active').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
       }
@@ -88,23 +97,25 @@ document.addEventListener('DOMContentLoaded', function () {
     false
   );
 
-  overlay.addEventListener('click', function () {
+  overlay.addEventListener('click', function (e) {
     document.querySelector('.modal.active').classList.remove('active');
+
     this.classList.remove('active');
-    removeClassListStyle();
+
+    removeClassListStyle(currentModalWindow);
   });
 }); // end ready
 
 // Remove overlay style function on modal close
-const removeClassListStyle = () => {
-  const overlay = document.querySelector('.overlay');
-  overlay.style.justifyContent = '';
-  overlay.style.paddingTop = '';
-};
+function removeClassListStyle(elem) {
+  elem.style.position = '';
+  elem.style.top = '';
+  elem.style.left = '';
+  elem.style.transform = '';
+}
 
 document
   .querySelector('button.extras__scroll-to-top')
   .addEventListener('click', e => {
-    console.log('click');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
