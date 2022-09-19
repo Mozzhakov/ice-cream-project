@@ -1,12 +1,8 @@
 @media screen and (max-width:767px) {
-	.container {
-		width: 480px;
-		margin: 0 auto;
-		width: 100%;
-	}
 
 	.section.products {
 		background-color: #fff;
+		width: 100%;
 		background-image: url("../images/products/mobile/background-mobile.svg");
 	}
 
@@ -28,6 +24,7 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
+		align-items: center;
 		margin-bottom: 12px;
 	}
 
@@ -185,16 +182,22 @@
 .button-icon {
 	background-color: transparent;
 	stroke: currentColor;
+	width: 42px;
+	height: 15px;
 
 
 	&:hover {
 		stroke: currentColor;
-		transform: scale(1.03);
+		transform: scale(1.5);
+		width: 52px;
+		height: 16px;
 	}
 
 	&:focus {
 		stroke: currentColor;
-		transform: scale(1.03);
+		transform: scale(2);
+		width: 55px;
+		height: 23px;
 	}
 }
 
