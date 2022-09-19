@@ -2,6 +2,9 @@
 
 	.section.products {
 		background-color: #fff;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 		width: 100%;
 		background-image: url("../images/products/mobile/background-mobile.svg");
 	}
@@ -12,10 +15,6 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
-	}
-
-	.section {
-		padding: 60px;
 	}
 
 	.products__pre-title {
@@ -163,7 +162,6 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: $black-text-color;
-	margin-bottom: 40px;
 }
 
 .card__text {
@@ -188,16 +186,16 @@
 
 	&:hover {
 		stroke: currentColor;
-		transform: scale(1.5);
-		width: 52px;
-		height: 16px;
+		transform: scale(1.7);
+		/*	width: 52px;
+		height: 16px;*/
 	}
 
 	&:focus {
 		stroke: currentColor;
 		transform: scale(2);
-		width: 55px;
-		height: 23px;
+		/*width: 55px;
+		height: 23px;*/
 	}
 }
 
