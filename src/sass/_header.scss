@@ -1,6 +1,13 @@
 
 .header {
 background-color: $main-bg-color;
+padding-top: 12px;
+@include tablet {
+    padding-top: 20px;
+}
+@include desktop {
+    padding-top: 8px;
+}
 
 .container {
     display: flex;
@@ -11,13 +18,16 @@ background-color: $main-bg-color;
 }
 .logo {
     @media screen and (max-width:767px) {
-        margin-top: 12px;
+        // margin-top: 12px;
+        width: 40.47px;
     }
     @include tablet {
-    margin-top: 20px;
+    // margin-top: 20px;
+    width: 48px;
     }
     @include desktop {
-        margin-top: 8px;
+        // margin-top: 8px;
+        width: 60px;
     }
 }
 .nav {
@@ -55,6 +65,7 @@ background-color: $main-bg-color;
         }
     }
 .menu-btn {
+    display: flex;
     border: none;
     background-color: transparent;
         @include tablet {
