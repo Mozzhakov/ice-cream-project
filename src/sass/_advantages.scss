@@ -2,6 +2,10 @@
 }
 
 .advantages-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -17,15 +21,16 @@
 .advantages-item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
   align-items: center;
+  text-align: center;
+  width: 230px;
 
   @include tablet {
-    margin-bottom: 0;
+    width: 152px;
   }
-}
-.advantages-item:last-child {
-  margin-bottom: 0;
+  @include desktop {
+    width: 368px;
+  }
 }
 
 .advantages-item:before {
@@ -49,13 +54,22 @@
 
 .advantages-item:nth-child(1):before {
   background-image: url(../images/advantages/cow.png);
+  @include retina {
+    background-image: url(../images/advantages/cow-2x.png);
+  }
 }
 
 .advantages-item:nth-child(2):before {
   background-image: url(../images/advantages/weight.png);
+  @include retina {
+    background-image: url(../images/advantages/weight-2x.png);
+  }
 }
 .advantages-item:nth-child(3):before {
   background-image: url(../images/advantages/ice-crema.png);
+  @include retina {
+    background-image: url(../images/advantages/ice-crema-2x.png);
+  }
 }
 .amount {
   @include font(700, 36px, 1.17, 0.04em);
@@ -76,16 +90,12 @@
 .advantages-paragraph {
   @include font(700, 12px, 1.67, 0.04em);
   color: $white-text-color;
-  text-align: center;
-  width: 230px;
 
   @include tablet {
     @include font(400, 14px, 1.7, 0.04em);
-    width: 152px;
   }
 
   @include desktop {
     @include font(400, 16px, 1.8, 0.02em);
-    width: 368px;
   }
 }
