@@ -1,0 +1,101 @@
+.advantages {
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    justify-content: center;
+  }
+
+  @include desktop {
+    column-gap: 32px;
+  }
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 230px;
+
+  @include tablet {
+    width: 152px;
+  }
+  @include desktop {
+    width: 368px;
+  }
+}
+
+.advantages-item:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $accent-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.advantages-item:nth-child(1):before {
+  background-image: url(../images/advantages/cow.png);
+  @include retina {
+    background-image: url(../images/advantages/cow-2x.png);
+  }
+}
+
+.advantages-item:nth-child(2):before {
+  background-image: url(../images/advantages/weight.png);
+  @include retina {
+    background-image: url(../images/advantages/weight-2x.png);
+  }
+}
+.advantages-item:nth-child(3):before {
+  background-image: url(../images/advantages/ice-crema.png);
+  @include retina {
+    background-image: url(../images/advantages/ice-crema-2x.png);
+  }
+}
+.amount {
+  @include font(700, 36px, 1.17, 0.04em);
+  text-transform: uppercase;
+  color: $white-text-color;
+  margin-bottom: 18px;
+
+  @include tablet {
+    @include font(700, 48px, 1.23, 0.04em);
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    @include font(700, 58px, 1.23, 0.04em);
+  }
+}
+
+.advantages-paragraph {
+  @include font(700, 12px, 1.67, 0.04em);
+  color: $white-text-color;
+
+  @include tablet {
+    @include font(400, 14px, 1.7, 0.04em);
+  }
+
+  @include desktop {
+    @include font(400, 16px, 1.8, 0.02em);
+  }
+}
