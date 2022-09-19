@@ -1,0 +1,94 @@
+.footer {
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .link {
+        text-decoration: none;
+      }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        @include mobile {
+          width: 480px;
+        }
+        @include tablet {
+          width: 768px;
+        }
+        @include desktop {
+          width: 1200px;
+        }
+      }
+    // .title {
+    // }
+    .text__made {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.22;
+        text-transform: uppercase;
+        color:$white-text-color;
+        margin-bottom: 16px;
+    }
+    .text__passion {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 1.21;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color:$white-text-color;
+        margin-bottom: 40px;
+    }
+    .soc {
+        margin-bottom: 40px;
+        display: flex;
+  gap: 25px;
+        justify-content: end;
+    }
+    // .soc__item {
+    // }
+.soc__link {
+        width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $accent-color;
+  color: $main-bg-color;
+&:hover,
+&:focus {
+color: $white-text-color;}
+}
+.soc__icons {
+    fill: currentColor;
+  }
+    // .tel {
+    // }
+    .tel__link {
+        font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 1.86;
+text-align: right;
+color: $white-text-color;
+
+    }
+    .tel__text {
+        color: $black-text-color;
+    }
+    .license-box {
+        margin-top: 40px;
+        border-top: 1px solid $white-text-color;
+    }
+    .license {
+        padding-top: 16px;
+        font-weight: 700;
+font-size: 14px;
+line-height: 1.52;
+text-align: center;
+color: #7A7A7A;
+        }
+    
+}
