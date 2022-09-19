@@ -2,9 +2,28 @@
   <div class="container">
     <p class="about-pre-title">tradition and love</p>
     <h2 id=about class="about-title">how it<span>&#39</span>s made?</h2>
+    <div class="about-content">
     <div class="about-picture">
-      <img class="about-cow" src="./images/about/about-cow-mob-1x.png" alt="cow" width="278" height="278" />
+      <picture>
+								<source
+									srcset="./images/about/about-cow-desk-1x.png 1x, 
+                          ./images/about/about-cow-desk-2x.png 2x"
+									media="(min-width:1200px)"
+								/>
+								<source
+									srcset="./images/about/about-cow-tab-1x.png 1x, 
+                          ./images/about/about-cow-tab-2x.png 2x"
+									media="(min-width:768px)"
+								/>
+								<source
+									srcset="./images/about/about-cow-mob-1x.png 1x, 
+                          ./images/about/about-cow-mob-1x.png 2x"
+									media="(max-width:767px)"
+								/>
+								<img class="about-cow" src="./images/about/about-cow-mob-1x.png" alt="cow" width="500" height="500" />
+							</picture>      
     </div>
+    <div class="about-text-cntainer">
     <ul class="about-list list">
       <li class="about-item"><p class="about-text">
       Ice is a place where you will become not only a little happier, but also
@@ -20,19 +39,17 @@
       <li class="about-item"><p class="about-text">
       This is enough to choose ice cream and coffee for any mood!
     </p></li>
-    </ul>
-    
-    
-    
-    
+    </ul>    
     <button type="button" class="main-button about-button">
       Read more
       <span>
-        <svg class="more" width="12" height="12">
+        <svg class="about-more" width="12" height="12">
           <use href="./images/symbol-defs.svg#icon-more"></use>
         </svg>
       </span>
     </button>
+    </div>
+    </div>
   </div>
 
   <!-- ------------------ЭТО БУДЕТ МОДАЛКА------------- -->
