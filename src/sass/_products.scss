@@ -184,13 +184,12 @@
 
 .button-icon {
 	background-color: transparent;
-	/*	stroke: currentColor;
-
-	&:focus {
-		stroke: currentColor;*/
+	stroke: currentColor;
 }
 
-
+&:focus {
+	stroke: currentColor;
+}
 
 @media screen and (min-width:768px) {
 	.section.products {
