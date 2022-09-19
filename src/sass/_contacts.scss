@@ -1,14 +1,10 @@
 .contacts {
-
-.section {}
-
-.container {}
-
-.visually-hidden {}
-
-.contacts__list {}
-
-.list {}
+.contacts__list {
+    @include tablet {
+        display: flex;
+        margin-bottom: 60px;
+    }
+}
 
 .contacts__item {
     padding-top: 40px;
@@ -21,24 +17,47 @@
     margin-bottom: 20px;
     &:last-child {
         margin-bottom: 32px;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+    @include tablet {
+        margin-bottom: 0;
+        margin-right: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include desktop {
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
 .contacts__address {
     margin-bottom: 48px;
     position: relative;
+    @include tablet {
+        margin-bottom: 64px;
+    }
 }
 
 .contacts__type {
     @include font(500, 12px, 186%, 0.04em);
     display: inline-block;
-    justify-content: center;
-    text-align: center;
     padding: 0 23px;
     border-radius: 4px;
     color: $black-text-color;
     margin-bottom: 20px;
     background-color: $accent-color;
+    @include tablet {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
 }
 
 .contacts__city {
@@ -59,14 +78,22 @@
         background-color: #E1E1E1;
         bottom: -24px;
         left: 0;
+        @include tablet {
+            bottom: -32px;
+        }
+    }
+    &:hover,
+    &:focus {
+        text-decoration-line: underline;
     }
 }
-
-.link {}
 
 .contacts__schedule {
     margin-bottom: 48px;
     position: relative;
+    @include tablet {
+        margin-bottom: 64px;
+    }
 }
 
 .contacts__schedule-list {
@@ -79,11 +106,10 @@
         background-color: #E1E1E1;
         bottom: -24px;
         left: 0;
+        @include tablet {
+            bottom: -32px;
+        }
     }
-}
-
-.contacts__schedule-item {
-    
 }
 
 .contacts__days {
@@ -97,23 +123,41 @@
 }
 
 .contacts__links .link {
+    display: block;
     @include font(500, 12px, 150%, 0.04em);
     color: $black-text-color;
 }
-
-.contacts__tel {}
-
-.contacts__mail {}
 
 .contacts__buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .contacts__buttons .main-button {
     margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
 }
 
-.contacts__svg {}
+.list {
+    .contacts__links .link,
+    .contacts__time,
+    .contacts__days,
+    .contacts__loc.link,
+    .contacts__city {
+        @include tablet {
+            font-size: 14px;
+        }
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+}
 }
