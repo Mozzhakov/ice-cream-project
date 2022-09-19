@@ -1,0 +1,286 @@
+.hero {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 239px;
+  &__title {
+    max-width: 274px;
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    & .pos {
+      font-size: 34px;
+      line-height: 0.97;
+      letter-spacing: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 32px;
+    .hero__item:not(:last-child) {
+      margin-right: 8px;
+      @include desktop {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__link {
+    @include font(600, 8px, 1.25, null);
+    padding: 5px 10px;
+    font-family: $main-ff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $accent-color;
+    background-color: transparent;
+    outline: none;
+    text-decoration: underline;
+    transition: color $timing-function $duratoin;
+    &:hover {
+      color: $hover-green-color;
+    }
+    &:focus {
+      color: $white-text-color;
+    }
+    &:disabled {
+      color: $disabled-color;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.21;
+      padding: 12px 22px;
+      border-radius: 10px;
+    }
+  }
+
+  .list__ice {
+    position: absolute;
+    bottom: 0;
+    left: 81px;
+    filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+  }
+  .list__face {
+    position: absolute;
+  }
+  .list__face:nth-child(2) {
+    bottom: 98;
+    left: 107;
+  }
+  .list__face:nth-child(3) {
+    bottom: 125;
+    left: 153;
+  }
+  .list__face:nth-child(4) {
+    bottom: 50;
+    left: 159;
+  }
+
+  .about-icecream {
+    display: none;
+  }
+  .cafe {
+    display: none;
+  }
+
+  .ice__list-tablet {
+    display: none;
+  }
+
+  .ellipse-tablet {
+    display: none;
+  }
+
+  .elipse-mob-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .elipse-mob-right {
+    position: absolute;
+    bottom: 0;
+    left: 190;
+  }
+
+  @include tablet {
+    padding-top: 104px;
+    padding-bottom: 13px;
+
+    &__title {
+      max-width: 181px;
+      font-family: 'Seymour One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      text-transform: uppercase;
+
+      color: #fcfcfc;
+      & .pos {
+        font-size: 24px;
+        line-height: 0.54;
+      }
+    }
+
+    .hero__top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .list__ice,
+    .list__face {
+      display: none;
+    }
+
+    .ellipse-mob {
+      display: none;
+    }
+
+    .plate-desktop {
+      display: none;
+    }
+    .about-icecream {
+      display: flex;
+      align-items: center;
+      margin-top: 28px;
+      .plate-tablet {
+        width: 152px;
+        height: 152px;
+        margin-right: 33px;
+        @include desktop {
+          display: none;
+        }
+      }
+      p {
+        max-width: 151px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.42;
+
+        color: #fcfcfc;
+
+        @include desktop {
+          font-size: 14px;
+          line-height: 1.43;
+          max-width: 200px;
+        }
+      }
+    }
+
+    .ice__list-tablet {
+      display: block;
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .list__ice-tablet {
+      position: absolute;
+      bottom: 0;
+      right: 93px;
+      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+    }
+
+    .list__face-tablet {
+      position: absolute;
+    }
+    .list__face-tablet:nth-child(2) {
+      bottom: 153;
+      right: 210;
+    }
+    .list__face-tablet:nth-child(3) {
+      bottom: 197;
+      right: 110;
+    }
+    .list__face-tablet:nth-child(4) {
+      bottom: 78;
+      right: 96;
+    }
+    .arrow-icon {
+      margin-top: 12px;
+      display: block;
+      @include desktop {
+        margin-top: 24px;
+      }
+    }
+
+    .ellipse-tablet {
+      display: block;
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .ellipse-tablet-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .ellipse-tablet-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+    .cafe {
+      display: block;
+    }
+    .cafe-track {
+      font-family: 'Montserrat';
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 1.21;
+      text-align: right;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: #131313;
+
+      .cafe-track-item {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.25;
+        text-transform: lowercase;
+        text-align: right;
+        vertical-align: top;
+        color: #fcfcfc;
+      }
+    }
+  }
+  @include desktop {
+    padding-top: 118px;
+    padding-bottom: 65px;
+
+    &__title {
+      min-width: 367px;
+      font-family: 'Seymour One';
+      @include font(400, 38px, 1.26, 0.04em);
+      text-transform: uppercase;
+
+      color: #fcfcfc;
+      & .pos {
+        font-size: 38px;
+        line-height: 1.26;
+      }
+    }
+
+    .about-icecream {
+      margin-top: 42px;
+    }
+
+    .plate-desktop {
+      margin-right: 14px;
+      display: block;
+    }
+  }
+}
