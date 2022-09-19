@@ -1,4 +1,8 @@
 .hero {
+  @media screen and (min-width: 319px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
   position: relative;
   padding-top: 110px;
   padding-bottom: 239px;
@@ -65,28 +69,30 @@
     }
   }
 
-  .list__ice {
+  .ice__list {
     position: absolute;
     bottom: 0;
-    left: 81px;
+    left: 50%;
     filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
     z-index: 1;
+    transform: translateX(-50%);
   }
+
   .list__face {
     position: absolute;
     z-index: 1;
   }
   .list__face:nth-child(2) {
     bottom: 98;
-    left: 107;
+    left: 25;
   }
   .list__face:nth-child(3) {
     bottom: 125;
-    left: 153;
+    left: 71;
   }
   .list__face:nth-child(4) {
     bottom: 50;
-    left: 159;
+    left: 77;
   }
 
   .about-icecream {
@@ -111,16 +117,15 @@
     display: none;
   }
 
-  .elipse-mob-left {
+  .elipse-mob-box {
     position: absolute;
     bottom: 0;
-    left: 0;
-  }
-
-  .elipse-mob-right {
-    position: absolute;
-    bottom: 0;
-    left: 190;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 328px;
+    @include tablet {
+      display: none;
+    }
   }
 
   @include tablet {
@@ -219,10 +224,18 @@
       bottom: 78;
       right: 96;
     }
+
     .arrow-icon {
       margin-top: 12px;
       display: inline-block;
       fill: #fcfcfc;
+      transition: transform $timing-function $duratoin;
+      &:hover,
+      &:focus {
+        transform: scale(1.25);
+        transform-origin: left;
+        outline: none;
+      }
       @include desktop {
         margin-top: 24px;
       }
