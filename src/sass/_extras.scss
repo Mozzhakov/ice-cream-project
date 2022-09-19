@@ -1,0 +1,38 @@
+.extras__scroll-to-top {
+  padding: 5px;
+  height: 50px;
+  width: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: $secondary-ff;
+  cursor: pointer;
+  z-index: 100;
+
+  background-color: $accent-color;
+  border: 0px;
+  border-radius: 50px;
+
+  animation: extras__scroll-to-top 1s linear infinite both;
+}
+
+@keyframes extras__scroll-to-top {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
