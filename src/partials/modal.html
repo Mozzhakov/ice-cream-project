@@ -1,179 +1,637 @@
-<div class="test-buttons">
-  <button class="js-open-modal" data-modal="1">TEST BUTTON - BUY NOW</button>
-  <button class="js-open-modal" data-modal="2">TEST BUTTON - READ MORE</button>
-  <button class="js-open-modal" data-modal="3">
-    TEST BUTTON - OUR LOCATION
-  </button>
-  <button class="js-open-modal main-button" data-modal="1">TEST BUTTON - BUY NOW</button>
-  <button class="js-open-modal main-button" data-modal="2">TEST BUTTON - READ MORE</button>
-</div>
-
 <!-- BUTTON SCROLL TO TOP OF SCREAN -->
 <button class="extras__scroll-to-top">Scroll To Top</button>
 
 <!-- -------------------- Buy now modal window -------------------- -->
-<div class="overlay js-overlay-modal">
-  <div class="modal" data-modal="1">
-    <button class="modal__button-close js-modal-close" data-modal-close>
-      <svg width="16" height="17" viewBox="0 0 16 17">
-        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
-      </svg>
-    </button>
+<!-- <div class="modal__all-modals-container"> -->
+<div class="modal" data-modal="1">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
 
-    <div class="modal__container" role="group">
-      <p class="modal__title">Buy now</p>
+  <div class="modal__container" role="group">
+    <p class="modal__title">Buy now</p>
 
-      <ul class="modal__items">
-        <li class="modal__item">
-          <img
-            class="modal__img"
-            srcset="
-              ./images/modal/modal-buyNow-iceCream.png    1x,
-              ./images/modal/modal-buyNow-iceCream@2x.png 2x
-            "
-            src="./images/modal/modal-buyNow-iceCream.png"
-            alt="ice cream"
-          />
-          <span class="modal__circl modal__iceCream"></span>
+    <ul class="modal__items">
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-iceCream.png    1x,
+            ./images/modal/modal-buyNow-iceCream@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-iceCream.png"
+          alt="ice cream"
+        />
+        <span class="modal__circl modal__iceCream"></span>
 
-          <p class="modal__text">ice cream</p>
-          <div class="modal__shape modal__iceCream"></div>
-        </li>
-        <li class="modal__item">
-          <img
-            class="modal__img"
-            srcset="
-              ./images/modal/modal-buyNow-iceCoffee.png    1x,
-              ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
-            "
-            src="./images/modal/modal-buyNow-iceCoffee.png"
-            alt="ice coffe"
-          />
-          <span class="modal__circl modal__iceCoffee"></span>
+        <p class="modal__text">ice cream</p>
+        <div class="modal__shape modal__iceCream"></div>
+      </li>
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-iceCoffee.png    1x,
+            ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-iceCoffee.png"
+          alt="ice coffe"
+        />
+        <span class="modal__circl modal__iceCoffee"></span>
 
-          <p class="modal__text">ice coffee</p>
-          <div class="modal__shape modal__iceCoffee"></div>
-        </li>
-        <li class="modal__item">
-          <img
-            class="modal__img"
-            srcset="
-              ./images/modal/modal-buyNow-milkshake.png    1x,
-              ./images/modal/modal-buyNow-milkshake@2x.png 2x
-            "
-            src="./images/modal/modal-buyNow-milkshake.png"
-            alt="milkShake"
-          />
-          <span class="modal__circl modal__milkShake"></span>
+        <p class="modal__text">ice coffee</p>
+        <div class="modal__shape modal__iceCoffee"></div>
+      </li>
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-milkshake.png    1x,
+            ./images/modal/modal-buyNow-milkshake@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-milkshake.png"
+          alt="milkShake"
+        />
+        <span class="modal__circl modal__milkShake"></span>
 
-          <p class="modal__text">milkshake</p>
-          <div class="modal__shape modal__milkShake"></div>
-        </li>
-      </ul>
+        <p class="modal__text">milkshake</p>
+        <div class="modal__shape modal__milkShake"></div>
+      </li>
+    </ul>
 
-      <form class="modal__form" name="modal-form" autocomplete="off">
-        <label class="modal__input-label">
-          <input
-            class="modal__form-input modal__input-div"
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-        </label>
+    <form class="modal__form" name="modal-form" autocomplete="off">
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </label>
 
-        <label class="modal__input-label">
-          <input
-            class="modal__form-input modal__input-div"
-            type="tel"
-            name="tel"
-            placeholder="Phone"
-            required
-          />
-        </label>
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
+      </label>
 
-        <label class="modal__input-label">
-          <!-- <div class="modal__input-textarea"> -->
-          <textarea
-            class="modal__form-input modal__input-textarea"
-            name="comment"
-            rows="3"
-            placeholder="Comment"
-            required
-          ></textarea>
-          <!-- </div> -->
-        </label>
-
-        <div class="modal__button-container">
-          <button class="modal__button" type="submit">submit</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- -------------------- HOW IT`S MADE -------------------- -->
-
-  <div class="modal modal__how-its-made" data-modal="2">
-    <button class="modal__button-close js-modal-close" data-modal-close>
-      <svg width="16" height="17" viewBox="0 0 16 17">
-        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
-      </svg>
-    </button>
-
-    <div class="modal__container" role="group">
-      <p class="modal__title">How it’s made?</p>
-
-      <button class="modal__about-us-video-zone">
-        <svg aria-hidden="true" viewBox="0 0 36 36">
-          <use
-            href="./images/modal/symbol-defs.svg#icon-modal-how-it-works-play"
-          ></use>
-        </svg>
-      </button>
-
-      <p class="modal__about-us-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-      </p>
-    </div>
-  </div>
-
-  <!-- -------------------- Our Location -------------------- -->
-
-  <div class="modal modal__our-location" data-modal="3">
-    <button class="modal__button-close js-modal-close" data-modal-close>
-      <svg width="16" height="17" viewBox="0 0 16 17">
-        <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
-      </svg>
-    </button>
-
-    <div class="modal__container" role="group">
-      <p class="modal__title">Our Location</p>
-
-      <div class="modal__our-location-map">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="
-              ./images/modal/map-modal-tabletDesktop.jpg    1x,
-              ./images/modal/map-modal-tabletDesktop@2x.jpg 2x
-            "
-          />
-          <source
-            media="(max-width: 767px)"
-            srcset="
-              ./images/modal/map-modal-mobile.jpg    1x,
-              ./images/modal/map-modal-mobile@2x.jpg 2x
-            "
-          />
-          <img src="./images/modal/map-modal-tabletDesktop.jpg" alt="map" />
-        </picture>
-      </div>
+      <label class="modal__input-label">
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
+      </label>
 
       <div class="modal__button-container">
-        <button class="main-button" type="submit">Submit</button>
+        <button class="main-button" type="submit">submit</button>
       </div>
+    </form>
+  </div>
+</div>
+
+<!-- -------------------- HOW IT`S MADE -------------------- -->
+
+<div class="modal modal__how-its-made" data-modal="2">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">How it’s made?</p>
+
+    <!-- <button class="modal__about-us-video-zone">
+      <svg aria-hidden="true" viewBox="0 0 36 36">
+        <use
+          href="./images/modal/symbol-defs.svg#icon-modal-how-it-works-play"
+        ></use>
+      </svg>
+    </button> -->
+
+    <div
+      class="modal__about-us-video-zone"
+      style="padding: 56.25% 0 0 0; position: relative"
+    >
+      <iframe
+        id="vimeo-player"
+        src="https://player.vimeo.com/video/76384528?h=07c04c4a14&color=0A8817"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <p class="modal__about-us-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
+</div>
+
+<!-- -------------------- Our Location -------------------- -->
+
+<div class="modal modal__our-location" data-modal="3">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">Our Location</p>
+
+    <div class="modal__our-location-map">
+      <!-- <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/modal/map-modal-tabletDesktop.jpg    1x,
+            ./images/modal/map-modal-tabletDesktop@2x.jpg 2x
+          "
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/modal/map-modal-mobile.jpg    1x,
+            ./images/modal/map-modal-mobile@2x.jpg 2x
+          "
+        />
+        <img src="./images/modal/map-modal-tabletDesktop.jpg" alt="map" />
+      </picture> -->
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8663399464604!2d30.531895015614868!3d50.42496187947188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d96f5139689b%3A0xa1f7c65300bebad1!2sGoIT!5e0!3m2!1sru!2sua!4v1663583211924!5m2!1sru!2sua"
+        width="100%"
+        height="260px"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="modal__button-container">
+      <button class="main-button" type="submit">Submit</button>
     </div>
   </div>
+</div>
+
+<!-- -------------------- FRANCHISE -------------------- -->
+
+<div class="modal modal__franchise" data-modal="4">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">
+      Thank you for your interest in owning an Ice Cream shop
+    </p>
+
+    <p class="modal__about-us-text">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form class="modal__form" name="modal-form" autocomplete="off">
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
+      </label>
+
+      <div class="modal__button-container">
+        <button class="main-button" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- </div> -->
+<div class="overlay js-overlay-modal"></div>
+
+<!------------ Chololate icecream --------------->
+
+<div class="modal modal__calories modal__calories-ice-cream" data-modal="5">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">Chololate icecream</p>
+
+    <ul class="modal__items">
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-iceCream.png    1x,
+            ./images/modal/modal-buyNow-iceCream@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-iceCream.png"
+          alt="ice cream"
+        />
+        <span class="modal__circl modal__iceCream"></span>
+      </li>
+    </ul>
+
+    <ul class="modal__calories-list">
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">320</div>
+        <div class="modal__calories-name">kcal</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">4g</div>
+        <div class="modal__calories-name">Protein...</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">8,2g</div>
+        <div class="modal__calories-name">Fats</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">40,4g</div>
+        <div class="modal__calories-name">Carbs</div>
+      </li>
+    </ul>
+
+    <p class="modal__calories-h2">Ingredients</p>
+
+    <ul class="modal__ing-table">
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Milk</div>
+        <div class="modal__ing-table-value">100ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Belgian chocolate</div>
+        <div class="modal__ing-table-value">20g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cream</div>
+        <div class="modal__ing-table-value">150 ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cocoa powder</div>
+        <div class="modal__ing-table-value">30g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Sugar</div>
+        <div class="modal__ing-table-value">40g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Vanilla sugar</div>
+        <div class="modal__ing-table-value">10g</div>
+      </li>
+    </ul>
+
+    <form class="modal__form" name="modal-form" autocomplete="off">
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
+      </label>
+
+      <div class="modal__button-container">
+        <button class="main-button" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!------------ Chololate ice coffee --------------->
+
+<div class="modal modal__calories modal__calories-ice-coffee" data-modal="6">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">Chololate ice coffee</p>
+
+    <ul class="modal__items">
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-iceCoffee.png    1x,
+            ./images/modal/modal-buyNow-iceCoffee@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-iceCoffee.png"
+          alt="ice cream"
+        />
+        <span class="modal__circl modal__iceCoffee"></span>
+      </li>
+    </ul>
+
+    <ul class="modal__calories-list">
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">320</div>
+        <div class="modal__calories-name">kcal</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">4g</div>
+        <div class="modal__calories-name">Protein...</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">8,2g</div>
+        <div class="modal__calories-name">Fats</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">40,4g</div>
+        <div class="modal__calories-name">Carbs</div>
+      </li>
+    </ul>
+
+    <p class="modal__calories-h2">Ingredients</p>
+
+    <ul class="modal__ing-table">
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Milk</div>
+        <div class="modal__ing-table-value">100ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Belgian chocolate</div>
+        <div class="modal__ing-table-value">20g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cream</div>
+        <div class="modal__ing-table-value">150 ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cocoa powder</div>
+        <div class="modal__ing-table-value">30g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Sugar</div>
+        <div class="modal__ing-table-value">40g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Vanilla sugar</div>
+        <div class="modal__ing-table-value">10g</div>
+      </li>
+    </ul>
+
+    <form class="modal__form" name="modal-form" autocomplete="off">
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
+      </label>
+
+      <div class="modal__button-container">
+        <button class="main-button" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!------------ Chololate icecream --------------->
+
+<div class="modal modal__calories modal__calories-milkshake" data-modal="7">
+  <button class="modal__button-close js-modal-close" data-modal-close>
+    <svg width="16" height="17" viewBox="0 0 16 17">
+      <use href="./images/modal/symbol-defs.svg#icon-modal-close-icon"></use>
+    </svg>
+  </button>
+
+  <div class="modal__container" role="group">
+    <p class="modal__title">Chololate icecream</p>
+
+    <ul class="modal__items">
+      <li class="modal__item">
+        <img
+          class="modal__img"
+          srcset="
+            ./images/modal/modal-buyNow-iceCream.png    1x,
+            ./images/modal/modal-buyNow-iceCream@2x.png 2x
+          "
+          src="./images/modal/modal-buyNow-iceCream.png"
+          alt="ice cream"
+        />
+        <span class="modal__circl modal__iceCream"></span>
+      </li>
+    </ul>
+
+    <ul class="modal__calories-list">
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">320</div>
+        <div class="modal__calories-name">kcal</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">4g</div>
+        <div class="modal__calories-name">Protein...</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">8,2g</div>
+        <div class="modal__calories-name">Fats</div>
+      </li>
+      <li class="modal__calories-list-item">
+        <div class="modal__calories-value">40,4g</div>
+        <div class="modal__calories-name">Carbs</div>
+      </li>
+    </ul>
+
+    <p class="modal__calories-h2">Ingredients</p>
+
+    <ul class="modal__ing-table">
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Milk</div>
+        <div class="modal__ing-table-value">100ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Belgian chocolate</div>
+        <div class="modal__ing-table-value">20g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cream</div>
+        <div class="modal__ing-table-value">150 ml</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Cocoa powder</div>
+        <div class="modal__ing-table-value">30g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Sugar</div>
+        <div class="modal__ing-table-value">40g</div>
+      </li>
+      <li class="modal__ing-table-item hover-underline-animation">
+        <div class="modal__ing-table-name">Vanilla sugar</div>
+        <div class="modal__ing-table-value">10g</div>
+      </li>
+    </ul>
+
+    <form class="modal__form" name="modal-form" autocomplete="off">
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <input
+          class="modal__form-input modal__input-div"
+          type="tel"
+          name="tel"
+          placeholder="Phone"
+          required
+        />
+      </label>
+
+      <label class="modal__input-label">
+        <!-- <div class="modal__input-textarea"> -->
+        <textarea
+          class="modal__form-input modal__input-textarea"
+          name="comment"
+          rows="3"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <!-- </div> -->
+      </label>
+
+      <div class="modal__button-container">
+        <button class="main-button" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ----------test buttons--------------- -->
+
+<div class="test-buttons">
+  <button class="js-open-modal main-button" data-modal="1">
+    TEST BUTTON - BUY NOW
+  </button>
+  <button class="js-open-modal main-button" data-modal="2">
+    TEST BUTTON - READ MORE
+  </button>
+  <button class="js-open-modal main-button" data-modal="3">
+    TEST BUTTON - OUR LOCATION
+  </button>
+  <button class="js-open-modal main-button" data-modal="4">
+    TEST BUTTON - FRANCHISE
+  </button>
+  <button class="js-open-modal main-button" data-modal="5">
+    TEST BUTTON - Chololate icecream
+  </button>
+  <button class="js-open-modal main-button" data-modal="6">
+    TEST BUTTON - ice coffee
+  </button>
+  <button class="js-open-modal main-button" data-modal="7">
+    TEST BUTTON - milkshakes
+  </button>
 </div>
