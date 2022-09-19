@@ -185,10 +185,17 @@
 .button-icon {
 	background-color: transparent;
 	stroke: currentColor;
-}
 
-&:focus {
-	stroke: currentColor;
+
+	&:hover {
+		stroke: currentColor;
+		transform: scale(1.03);
+	}
+
+	&:focus {
+		stroke: currentColor;
+		transform: scale(1.03);
+	}
 }
 
 @media screen and (min-width:768px) {
