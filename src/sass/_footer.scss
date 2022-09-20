@@ -1,4 +1,5 @@
 .footer {
+    background-color: $main-bg-color;
 .box {
     @include tablet {
         display: flex;
