@@ -181,6 +181,7 @@
 		&:hover {
 			stroke: currentColor;
 			transform: scale(1.7);
+			background-color: transparent;
 			/*	width: 52px;
 		height: 16px;*/
 		}
@@ -188,6 +189,7 @@
 		&:focus {
 			stroke: currentColor;
 			transform: scale(2);
+			background-color: transparent;
 			/*width: 55px;
 		height: 23px;*/
 		}
