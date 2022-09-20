@@ -7,11 +7,12 @@
   right: 20px;
   font-family: $secondary-ff;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1;
 
   background-color: $accent-color;
   border: 0px;
   border-radius: 50px;
+  border: 2px solid $black-text-color;
 
   animation: extras__scroll-to-top 1s linear infinite both;
 }
@@ -34,5 +35,33 @@
   }
   100% {
     transform: translate(0);
+  }
+}
+
+.color-change-3x {
+  -webkit-animation: color-change-3x 5s infinite alternate both;
+  animation: color-change-3x 5s infinite alternate both;
+}
+
+@-webkit-keyframes color-change-3x {
+  0% {
+    background: hsla(90, 83%, 51%, 0.5);
+  }
+  50% {
+    background: hsla(223, 100%, 59%, 0.5);
+  }
+  100% {
+    background: hsla(294, 100%, 60%, 0.5);
+  }
+}
+@keyframes color-change-3x {
+  0% {
+    background: hsla(90, 83%, 51%, 0.5);
+  }
+  50% {
+    background: hsla(223, 100%, 59%, 0.5);
+  }
+  100% {
+    background: hsla(294, 100%, 60%, 0.5);
   }
 }
