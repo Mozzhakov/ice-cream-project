@@ -2,8 +2,8 @@
   <div class="container">
     <p class="products__pre-title">100% natural</p>
     <h2 class="products__title">products</h2>
-    <div class="products__cards">
-      <div class="products__card products__card--ice-cream">
+    <ul class="products__cards">
+      <li class="products__card products__card--ice-cream">
         <picture>
           <source
             srcset="
@@ -61,14 +61,15 @@
         <span class="products__circle products__circle--icecream"></span>
         <div class="card__item">
           <h3 class="card__title">ice cream</h3>
-          <p class="card__text">
+          <div class="card__box">
+            <p class="card__text">
             Soft ice cream with a delicate taste. Made with milk, cream, sugar
             and natural stabilizer
           </p>
-          <button class="card__button" type="button">
+          <button class="card__button js-open-modal" type="button" data-modal="5" aria-label="ingregients">
             <svg
               class="button-icon"
-              width="40"
+              width="42"
               height="15"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -78,9 +79,10 @@
               />
             </svg>
           </button>
-        </div>
-      </div>
-      <div class="products__card products__card--ice-coffee">
+          </div>
+          
+      </li>
+      <li class="products__card products__card--ice-coffee">
         <picture>
           <source
             srcset="
@@ -138,11 +140,12 @@
         <span class="products__circle products__circle--icecoffee"></span>
         <div class="card__item">
           <h3 class="card__title">ice coffee</h3>
-          <p class="card__text">
+          <div class="card__box">
+            <p class="card__text">
             Fragrant invigorating drink created from 100% natural ingredients
             without the use of preservatives and flavor enhancers
           </p>
-          <button class="card__button" type="button">
+          <button class="card__button js-open-modal" type="button" data-modal="6" aria-label="ingregients">
             <svg
               class="button-icon"
               width="40"
@@ -155,10 +158,10 @@
               />
             </svg>
           </button>
-        </div>
-      </div>
-
-      <div class="products__card products__card--milkshakes">
+          </div>
+          
+      </li>
+      <li class="products__card products__card--milkshakes">
         <picture>
           <source
             srcset="
@@ -216,11 +219,12 @@
         <span class="products__circle products__circle--milksnakes"></span>
         <div class="card__item">
           <h3 class="card__title">milkshakes</h3>
-          <p class="card__text">
+          <div class="card__box">
+            <p class="card__text">
             Sweet drinks based on milk and ice cream, supplemented with syrups,
             fruits, berries and other sweets of your choice
           </p>
-          <button class="card__button" type="button">
+          <button class="card__button js-open-modal" type="button" data-modal="7" aria-label="ingregients">
             <svg
               class="button-icon"
               width="40"
@@ -233,8 +237,7 @@
               />
             </svg>
           </button>
-        </div>
-      </div>
-    </div>
-  </div>
+          </div>
+      </li>
+    </ul>
 </section>
