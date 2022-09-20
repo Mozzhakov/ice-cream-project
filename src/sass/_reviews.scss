@@ -1,0 +1,128 @@
+.swiper {
+    text-align: center;
+}
+
+.slide-coment {
+    @media screen and (max-width: 480px) {
+        max-width: 100%;
+        background-color: rgb(36, 138, 227);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 255%;
+        text-align: center;
+        color: #FCFCFC;
+        border-radius: 10px;
+        padding: 34px 39px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@include mobile {
+    .slide-coment {
+        max-width: 100%;
+        background-color: rgb(36, 138, 227);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 255%;
+        text-align: center;
+        color: #FCFCFC;
+        border-radius: 10px;
+        padding: 34px 39px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@include mobile {
+    .slide-name {
+        margin-bottom: 14px;
+    }
+}
+
+@include mobile {
+    .slide-name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 186%;
+        text-align: center;
+        color: #131313;
+    }
+}
+
+.slide-name {
+    @media screen and (max-width: 480px) {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 186%;
+        text-align: center;
+        color: #131313;
+    }
+}
+.slider-img {
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+@include tablet {
+    .slide-coment {
+        font-size: 14px;
+        line-height: 186%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FCFCFC;
+    }
+}
+@include tablet {
+    .slide-name {
+    margin-bottom: 32px;
+    }
+}
+
+@include tablet {
+    .slide-coment {
+        width: 705px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 186%;
+        letter-spacing: 0.04em;
+        background-color: rgb(36, 138, 227);
+        text-align: center;
+        color: #FCFCFC;
+        border-radius: 10px;
+        padding: 29px 80px;
+        margin-bottom: 32px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@include desktop {
+.slide-coment {
+    width: 968px;
+    height: 138px;
+    background-color: rgb(36, 138, 227);
+    font-size: 16px;
+    line-height: 186%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FCFCFC;
+    border-radius: 24px;
+    padding: 39px 74px;
+    margin-bottom: 36px;
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+@include desktop {
+    .slide-name  {
+                    font-size: 16px;
+                    line-height: 186%;
+                    text-align: center;
+                    color: #131313;
+                    margin-bottom: 33px;
+    } }
