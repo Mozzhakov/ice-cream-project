@@ -1,72 +1,138 @@
 .footer {
-    
-    // .title {
-    // }
+    background-color: $main-bg-color;
+.box {
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+       } 
+}
+    .title {
+       max-width: 234px;
+      
+       @include tablet {
+        max-width: 352px;
+       }
+       @include desktop {
+        max-width: 504px;
+       }
+    }
     .text__made {
         font-weight: 700;
         font-size: 18px;
         line-height: 1.22;
         text-transform: uppercase;
-        color:$white-text-color;
+        color: $white-text-color;
         margin-bottom: 16px;
+        @include tablet {
+            font-size: 26px;
+           }
+        @include desktop {
+            font-size: 30px;
+           }   
     }
+
     .text__passion {
         font-weight: 700;
         font-size: 34px;
         line-height: 1.21;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color:$white-text-color;
+        color: $white-text-color;
         margin-bottom: 40px;
+        @include tablet {
+            font-size: 48px;
+           }
+        @include desktop {
+            font-size: 58px;
+           }   
     }
+.contact-soc {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
     .soc {
         margin-bottom: 40px;
         display: flex;
-  gap: 25px;
+        gap: 25px;
         justify-content: end;
     }
+
     // .soc__item {
     // }
-.soc__link {
-        width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $accent-color;
-  color: $main-bg-color;
-&:hover,
-&:focus {
-color: $white-text-color;}
-}
-.soc__icons {
-    fill: currentColor;
-  }
+    .soc__link {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $accent-color;
+        color: $main-bg-color;
+
+        &:hover {
+            color: $white-text-color;
+                width: 32px;
+                height: 32px;
+            }
+        &:focus {
+            color: $white-text-color;
+            width: 35px;
+            height: 35px;
+        }
+
+    }
+
+    .soc__icons {
+        fill: currentColor;
+    }
+
     // .tel {
     // }
     .tel__link {
-font-weight: 700;
-font-size: 12px;
-line-height: 1.86;
-text-align: right;
-color: $white-text-color;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.86;
+        text-align: right;
+        color: $white-text-color;
+        @include tablet {
+            font-size: 14px;
+           }
+        @include desktop {
+            font-size: 16px;
+           }   
 
     }
+
     .tel__text {
         color: $black-text-color;
     }
+
     .license-box {
         margin-top: 40px;
         border-top: 1px solid #E1E1E1;
     }
+
     .license {
         padding-top: 16px;
+        padding-bottom: 60px;
         font-weight: 700;
-font-size: 14px;
-line-height: 1.52;
-text-align: center;
-color: #7A7A7A;
-        }
-    
+        font-size: 14px;
+        line-height: 1.52;
+        text-align: center;
+        color: #7A7A7A;
+        @include tablet {
+            padding-top: 14px;
+        padding-bottom: 14px;
+           }
+        @include desktop {
+            font-size: 12px;
+            padding-top: 12px;
+        padding-bottom: 12px;
+           }   
+    }
+
 }
