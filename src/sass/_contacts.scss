@@ -1,4 +1,27 @@
 .contacts {
+    background-image: linear-gradient(
+        to bottom,
+        #0000 26%,
+        $main-bg-color 10%,
+        $main-bg-color 64%,
+    );
+    @include tablet {
+        background-image: linear-gradient(
+            to bottom,
+            #0000 50%,
+            $main-bg-color 10%,
+            $main-bg-color 40%,
+        );
+    }
+    @include desktop {
+        background-image: linear-gradient(
+            to bottom,
+            #0000 20%,
+            $main-bg-color 10%,
+            $main-bg-color 70%,
+        );
+    }
+
 .contacts__list {
     display: flex;
     flex-direction: column;
