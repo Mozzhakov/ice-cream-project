@@ -2,7 +2,13 @@
 
 body {
   font-family: $main-ff;
-  background-color: $main-bg-color;
+  // background-color: $main-bg-color;
+
+  background: url(../images/iceCreamBG1.jpg) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .container {
@@ -43,8 +49,8 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 90px 15px;
   overflow-y: scroll;
-//   transition: opacity var(--duration) var(--timing-function),
-//     visibility var(--duration) var(--timing-function), scale var(--duration) var(--timing-function);
+  //   transition: opacity var(--duration) var(--timing-function),
+  //     visibility var(--duration) var(--timing-function), scale var(--duration) var(--timing-function);
 }
 
 .list {
