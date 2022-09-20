@@ -30,4 +30,6 @@ const swiper = new Swiper('.swiper', {
     sensitivity: 1
   },
   
+  autoHeight: true,
+  
 });
