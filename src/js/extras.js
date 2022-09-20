@@ -8,11 +8,11 @@ AOS.init();
 
 // Add to all images lazy loading and fade in on scroll
 (function () {
-  document.querySelectorAll('.img-animation').forEach(img => {
+  document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
-    img.setAttribute('data-aos', 'fade-in');
-    img.setAttribute('data-aos-delay', '200');
-    img.setAttribute('data-aos-duration', '500');
+    // img.setAttribute('data-aos', 'fade-in');
+    // img.setAttribute('data-aos-delay', '200');
+    // img.setAttribute('data-aos-duration', '500');
     // img.setAttribute('data-aos-placement', 'bottom-center');
   });
 })();
