@@ -17,16 +17,20 @@ AOS.init();
   });
 })();
 
-(function () {
+// Set scroll to top button content
+
+const setScrollButtonContent = function () {
   const scrollButtonToTop = document.querySelector('.extras__scroll-to-top');
-  scrollButtonToTop.style.border = '2px solid black';
 
   if (window.innerWidth < 768) {
     scrollButtonToTop.innerHTML = 'TOP';
   } else {
     scrollButtonToTop.innerHTML = 'Scroll To Top';
   }
-})();
+};
+
+setScrollButtonContent();
+window.onresize = throttle(setScrollButtonContent, 500);
 
 // Local storage for video player
 const iframe = document.querySelector('#vimeo-player');
