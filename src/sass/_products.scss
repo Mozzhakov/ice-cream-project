@@ -66,10 +66,10 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 		padding: 0px 40px;
 		top: 125px;
-		bottom: 20px;
+		bottom: 15px;
 	}
 
 
@@ -156,6 +156,15 @@
 		text-align: center;
 		text-transform: uppercase;
 		color: $black-text-color;
+		margin-bottom: 40px;
+	}
+
+	.card__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
 	}
 
 	.card__text {
@@ -166,6 +175,8 @@
 	}
 
 	.card__button {
+		padding: 0;
+		display: flex;
 		background-color: transparent;
 		border: none;
 		color: $black-text-color;
@@ -263,11 +274,10 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 		padding: 0px 32px;
 		top: 130px;
-		bottom: 20px;
-
+		bottom: 15px;
 	}
 
 
@@ -350,6 +360,15 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+
+	.card__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
 	}
 
 	.card__text {
@@ -363,6 +382,8 @@
 	}
 
 	.card__button {
+		display: flex;
+		padding: 0;
 		background-color: transparent;
 		border: none;
 		color: #131313;
@@ -454,11 +475,10 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 		padding: 0px 63px;
 		top: 180px;
-		bottom: 60px;
-
+		bottom: 15px;
 	}
 
 
@@ -541,6 +561,15 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 65px;
+	}
+
+	.card__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
 	}
 
 	.card__text {
@@ -551,6 +580,8 @@
 	}
 
 	.card__button {
+		display: flex;
+		padding: 0;
 		background-color: transparent;
 		border: none;
 		color: #131313;
