@@ -1,4 +1,8 @@
 .hero {
+  @media screen and (min-width: 319px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
   position: relative;
   padding-top: 110px;
   padding-bottom: 239px;
@@ -22,6 +26,12 @@
   &__list {
     display: flex;
     margin-top: 32px;
+    @include tablet {
+      margin-top: 20px;
+    }
+    @include desktop {
+      margin-top: 28px;
+    }
     .hero__item:not(:last-child) {
       margin-right: 8px;
       @include desktop {
@@ -59,26 +69,30 @@
     }
   }
 
-  .list__ice {
+  .ice__list {
     position: absolute;
     bottom: 0;
-    left: 81px;
+    left: 50%;
     filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+    z-index: 1;
+    transform: translateX(-50%);
   }
+
   .list__face {
     position: absolute;
+    z-index: 1;
   }
   .list__face:nth-child(2) {
     bottom: 98;
-    left: 107;
+    left: 25;
   }
   .list__face:nth-child(3) {
     bottom: 125;
-    left: 153;
+    left: 71;
   }
   .list__face:nth-child(4) {
     bottom: 50;
-    left: 159;
+    left: 77;
   }
 
   .about-icecream {
@@ -96,16 +110,22 @@
     display: none;
   }
 
-  .elipse-mob-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  .ice__list-desktop {
+    display: none;
+  }
+  .ellipse-desktop {
+    display: none;
   }
 
-  .elipse-mob-right {
+  .elipse-mob-box {
     position: absolute;
     bottom: 0;
-    left: 190;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 328px;
+    @include tablet {
+      display: none;
+    }
   }
 
   @include tablet {
@@ -204,9 +224,18 @@
       bottom: 78;
       right: 96;
     }
+
     .arrow-icon {
       margin-top: 12px;
-      display: block;
+      display: inline-block;
+      fill: #fcfcfc;
+      transition: transform $timing-function $duratoin;
+      &:hover,
+      &:focus {
+        transform: scale(1.25);
+        transform-origin: left;
+        outline: none;
+      }
       @include desktop {
         margin-top: 24px;
       }
@@ -236,24 +265,24 @@
     }
     .cafe-track {
       font-family: 'Montserrat';
-      font-weight: 900;
-      font-size: 28px;
-      line-height: 1.21;
+      @include font(900, 28px, 1.21, 0.04em);
       text-align: right;
-      letter-spacing: 0.04em;
       text-transform: uppercase;
-
       color: #131313;
+      @include desktop {
+        @include font(900, 46px, 1.22, 0.04em);
+      }
 
       .cafe-track-item {
         font-family: 'Montserrat';
-        font-weight: 400;
-        font-size: 8px;
-        line-height: 1.25;
+        @include font(400, 8px, 1.25, null);
         text-transform: lowercase;
         text-align: right;
         vertical-align: top;
         color: #fcfcfc;
+        @include desktop {
+          @include font(400, 14px, 1.21, null);
+        }
       }
     }
   }
@@ -276,11 +305,46 @@
 
     .about-icecream {
       margin-top: 42px;
+      z-index: 1;
     }
 
     .plate-desktop {
       margin-right: 14px;
       display: block;
+    }
+    .ellipse-desktop {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .ice__list-desktop {
+      display: block;
+    }
+
+    .list__ice-desktop {
+      position: absolute;
+      bottom: 0;
+      right: 102px;
+      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+    }
+
+    .list__face-desktop {
+      position: absolute;
+    }
+    .list__face-desktop:nth-child(2) {
+      bottom: 266;
+      right: 298;
+    }
+    .list__face-desktop:nth-child(3) {
+      bottom: 342;
+      right: 115;
+    }
+    .list__face-desktop:nth-child(4) {
+      bottom: 138;
+      right: 93;
     }
   }
 }

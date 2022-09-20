@@ -1,3 +1,7 @@
+.about {
+  background-color: $main-bg-color
+}
+
 .about-pre-title {
   @include font(700, 18px, 1.2, null);
   margin-left: auto;
@@ -26,6 +30,7 @@
   color: $white-text-color;
   margin-bottom: 32px;
   @include tablet {
+    white-space: nowrap;
     max-width: 454px;
     font-size: 34px;
     letter-spacing: 0.06em;
@@ -42,6 +47,9 @@
   @include tablet {
     display: flex;
     gap: 32px;
+  }
+  @include desktop {
+    gap: 100px;
   }
 }
 .about-picture {
@@ -60,17 +68,21 @@
   background-repeat: no-repeat;
   margin-bottom: 62px;
   @include tablet {
-    max-width: 334px;
-    height: 334px;
+    min-width: 334px;
+    min-height: 334px;
     margin-bottom: 0;
-    @include desktop {
-      width: 500px;
-      height: 500px;
-    }
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desktop {
+    min-width: 500px;
+    min-height: 500px;
   }
 }
 .about-cow {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   transform: translateY(22px);
   @include tablet {
@@ -80,18 +92,32 @@
     transform: translateY(39px);
   }
 }
-.abot-text-container {
-  max-width: 334px;
+.about-img {
+  width: 100%;
+}
+.about-text-container {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 334px;
+  }
+  @include desktop {
+    max-width: 463px;
+  }
 }
 .about-item {
   @include font(400, 12px, 1.75, 0.04em);
   text-align: center;
   color: $white-text-color;
+  @include tablet {
+    text-align: left;
+  }
   @include desktop {
     font-size: 16px;
   }
 }
-.about-list:not(:last-child) {
+.about-item:not(:last-child) {
   margin-bottom: 4px;
   @include tablet {
     margin-bottom: 8px;
@@ -101,6 +127,7 @@
   display: none;
   @include tablet {
     display: block;
+    margin-bottom: 48px;
   }
 }
 .about-button {
@@ -110,6 +137,10 @@
   margin-right: auto;
   gap: 5px;
   stroke: currentColor;
+  @include tablet {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 }
 .about-more {
   stroke: currentColor;

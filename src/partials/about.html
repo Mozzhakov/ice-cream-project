@@ -1,70 +1,78 @@
-<section class="about section">
+<section class="about section" id="about">
   <div class="container">
     <p class="about-pre-title">tradition and love</p>
-    <h2 id=about class="about-title">how it<span>&#39</span>s made?</h2>
+    <h2 class="about-title">how it's made?</h2>
     <div class="about-content">
-    <div class="about-picture">
-      <picture>
-								<source
-									srcset="./images/about/about-cow-desk-1x.png 1x, 
-                          ./images/about/about-cow-desk-2x.png 2x"
-									media="(min-width:1200px)"
-								/>
-								<source
-									srcset="./images/about/about-cow-tab-1x.png 1x, 
-                          ./images/about/about-cow-tab-2x.png 2x"
-									media="(min-width:768px)"
-								/>
-								<source
-									srcset="./images/about/about-cow-mob-1x.png 1x, 
-                          ./images/about/about-cow-mob-1x.png 2x"
-									media="(max-width:767px)"
-								/>
-								<img class="about-cow" src="./images/about/about-cow-mob-1x.png" alt="cow" width="500" height="500" />
-							</picture>      
-    </div>
-    <div class="about-text-cntainer">
-    <ul class="about-list list">
-      <li class="about-item"><p class="about-text">
-      Ice is a place where you will become not only a little happier, but also
-      healthier. Health is the main value for us, and we follow it when creating
-      our handmade desserts.
-    </p></li>
-      <li class="about-item"><p class="about-text">
-      We use traditional recipes and 100% natural ingredients. Our products are
-      so natural that they can be given to children from the age of three years.
-      Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23
-      milkshakes.
-    </p></li>
-      <li class="about-item"><p class="about-text">
-      This is enough to choose ice cream and coffee for any mood!
-    </p></li>
-    </ul>    
-    <button type="button" class="main-button about-button">
-      Read more
-      <span>
-        <svg class="about-more" width="12" height="12">
-          <use href="./images/symbol-defs.svg#icon-more"></use>
-        </svg>
-      </span>
-    </button>
-    </div>
+      <div class="about-picture">
+        <div class="about-cow">
+          <picture>
+            <source
+              srcset="
+                ./images/about/about-cow-desk-1x.png 1x,
+                ./images/about/about-cow-desk-2x.png 2x
+              "
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./images/about/about-cow-tab-1x.png 1x,
+                ./images/about/about-cow-tab-2x.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/about/about-cow-mob-1x.png 1x,
+                ./images/about/about-cow-mob-1x.png 2x
+              "
+              media="(max-width:767px)"
+            />
+            <img
+              class="about-img"
+              src="./images/about/about-cow-mob-1x.png"
+              alt="cow"
+              width="278"
+              height="278"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="about-text-container">
+        <ul class="about-list list">
+          <li class="about-item">
+            <p class="about-text">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+          </li>
+          <li class="about-item">
+            <p class="about-text">
+              We use traditional recipes and 100% natural ingredients. Our
+              products are so natural that they can be given to children from
+              the age of three years. Sweets lovers can expect 55 types of ice
+              cream, 15 types of coffee and 23 milkshakes.
+            </p>
+          </li>
+          <li class="about-item">
+            <p class="about-text">
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="main-button about-button js-open-modal"
+          data-modal="2"
+        >
+          Read more
+          <span>
+            <svg class="about-more" width="12" height="12">
+              <use href="./images/symbol-defs.svg#icon-more"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-
-  <!-- ------------------ЭТО БУДЕТ МОДАЛКА------------- -->
-  <!-- <div class="backdrop is-hidden" data-modal>
-    <div class="about-modal">
-        <button type="button" data-modal-close class="about-modal-close">x
-					<svg width="16" height="16">
-						<use href="#"></use>
-					</svg>
-        </button>
-        <h2 class="about-modal-title">How it<span>&#39</span>s made?</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/AZGJBZxsfmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="about-modal-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo veniam quis saepe dolores, ad, quisquam quae sunt incidunt rem accusantium deserunt neque sed natus. Nostrum, quos ad? Rerum, molestiae iusto.
-        </p>
-    </div>
-  </div> -->
 </section>

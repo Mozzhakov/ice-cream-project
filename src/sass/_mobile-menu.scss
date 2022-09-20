@@ -57,7 +57,7 @@
 .mob-menu {
   position: fixed;
   background-color: $mob-menu-bg-color;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,8 +114,19 @@
   transition: transform $duratoin $timing-function;
 }
 
-.buy-now-btn {
+.main-button--none {
   @include tablet {
     display: none;
   }
+}
+
+.icon-btn-after {
+  stroke: currentColor;
+
+  &:focus {
+    stroke: currentColor;
+  }
+}
+.icon-btn-after--marg {
+  margin-left: 7px;
 }
