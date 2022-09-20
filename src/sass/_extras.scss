@@ -3,6 +3,8 @@
   height: 50px;
   width: auto;
   position: fixed;
+  opacity: 0;
+  visibility: hidden;
   bottom: 20px;
   right: 20px;
   font-family: $secondary-ff;
@@ -15,12 +17,14 @@
   border: 2px solid $black-text-color;
 
   animation: extras__scroll-to-top 1s linear infinite both;
+
   transition: color $timing-function $duratoin,
     background $timing-function $duratoin;
 
   &:hover {
     color: $white-text-color;
     background: $hover-green-color;
+
   }
 }
 
