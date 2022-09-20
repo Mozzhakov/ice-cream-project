@@ -19,8 +19,14 @@ AOS.init();
 
 // Set scroll to top button content
 
-const setScrollButtonContent = function () {
+const setScrollButtonContent = function (windowHeight) {
   const scrollButtonToTop = document.querySelector('.extras__scroll-to-top');
+
+  if (windowHeight >= 700) {
+    scrollButtonToTop.classList.add('active');
+  } else {
+    scrollButtonToTop.classList.remove('active');
+  }
 
   if (window.innerWidth < 768) {
     scrollButtonToTop.innerHTML = 'TOP';
@@ -28,6 +34,12 @@ const setScrollButtonContent = function () {
     scrollButtonToTop.innerHTML = 'Scroll To Top';
   }
 };
+window.addEventListener(
+  'scroll',
+  throttle(() => {
+    setScrollButtonContent(window.pageYOffset);
+  }, 250)
+);
 
 setScrollButtonContent();
 window.onresize = throttle(setScrollButtonContent, 500);
