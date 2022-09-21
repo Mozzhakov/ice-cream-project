@@ -1,3 +1,7 @@
+.about {
+  background-color: $main-bg-color
+}
+
 .about-pre-title {
   @include font(700, 18px, 1.2, null);
   margin-left: auto;
@@ -67,6 +71,8 @@
     min-width: 334px;
     min-height: 334px;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   @include desktop {
     min-width: 500px;
@@ -111,7 +117,7 @@
     font-size: 16px;
   }
 }
-.about-list:not(:last-child) {
+.about-item:not(:last-child) {
   margin-bottom: 4px;
   @include tablet {
     margin-bottom: 8px;
