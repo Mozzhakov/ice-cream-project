@@ -10,6 +10,7 @@
   border: none;
   outline: none;
   border-radius: 10px;
+  cursor: pointer;
   transition: color $timing-function $duratoin,
     background-color $timing-function $duratoin;
   &:hover {
@@ -38,6 +39,7 @@
   border: 2px solid $accent-color;
   outline: none;
   border-radius: 8px;
+  cursor: pointer;
   transition: color $timing-function $duratoin,
     border $timing-function $duratoin;
   &:hover {
@@ -70,6 +72,7 @@
   border: 2px solid $accent-color;
   outline: none;
   border-radius: 10px;
+  cursor: pointer;
   transition: color $timing-function $duratoin,
     border $timing-function $duratoin;
   &:hover {
