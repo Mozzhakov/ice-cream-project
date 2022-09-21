@@ -1,0 +1,65 @@
+<header class="header" id="header">
+  <div class="container">
+    <a href="#header" class="logo">
+      <picture>
+        <source
+          srcset="
+            ./images/header/logo-desktop-1x.png 1x,
+            ./images/header/logo-desktop-2x.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+
+        <source
+          srcset="
+            ./images/header/logo-tablet-1x.png 1x,
+            ./images/header/logo-tablet-2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/header/logo-mobile-1x.png 1x,
+            ./images/header/logo-mobile-2x.png 2x
+          "
+          media="(max-width:767px)"
+        />
+        <img
+          src="./images/header/logo-desktop-1x.png"
+          alt="морозиво"
+          width="60"
+          height="65"
+        />
+      </picture>
+    </a>
+    <nav class="nav">
+      <ul class="list">
+        <li class="item">
+          <a href="#header" class="link">Home</a>
+        </li>
+        <li class="item">
+          <a href="#about" class="link">How it’s made?</a>
+        </li>
+        <li class="item">
+          <a href="#products" class="link">Our products</a>
+        </li>
+        <li class="item">
+          <a href="#contacts" class="link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="position">
+      <button type="button" class="menu-btn menu-btn--open" data-menu-open>
+        <svg class="menu-btn__icon" width="32" height="32">
+          <use href="./images/header/icon.svg#icon-menu-open"></use>
+        </svg>
+      </button>
+      <button type="button" class="main-button">
+        <span class="main-button-title">Buy now</span>
+        <svg class="icon-btn-after" width="12" height="12">
+          <use href="./images/header/icon.svg#icon-btn-after"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
