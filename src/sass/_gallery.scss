@@ -1,0 +1,42 @@
+.gallery {
+  width: 100%;
+  background-image: linear-gradient(to bottom, $main-bg-color 31%, rgba(255, 255, 255, 0.014) 31%);
+
+  @include tablet {
+    background-image: linear-gradient(to bottom, $main-bg-color 50%, rgba(255, 255, 255, 0.014) 50%);
+  }
+
+  @include desktop {
+    background-image: linear-gradient(to bottom, $main-bg-color 22.3%, rgba(255, 255, 255, 0.014) 22.3%);
+  }
+}
+
+.gallery__img {
+  margin: 0 auto;
+  border-radius: 7.40681px;
+  min-width: 100%;
+  max-height: 130px;
+
+  @include tablet {
+    max-height: 327px;
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  @include desktop {
+    max-height: 422px;
+    border-radius: 24px;
+  }
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.swiper-gallary {
+  width: 100%;
+}
