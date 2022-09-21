@@ -188,8 +188,8 @@
   }
 
   .card__button:focus .button-icon {
-	transform: scale(1.5);
-	outline: none;
+    transform: scale(1.5);
+    outline: none;
   }
 
   .button-icon {
@@ -197,7 +197,7 @@
     stroke: currentColor;
     width: 42px;
     height: 15px;
-	transition: transform $duratoin $timing-function;
+    transition: transform $duratoin $timing-function;
     &:hover {
       stroke: currentColor;
       transform: scale(1.25);
@@ -394,8 +394,8 @@
   }
 
   .card__button:focus .button-icon {
-	transform: scale(1.5);
-	outline: none;
+    transform: scale(1.5);
+    outline: none;
   }
 
   .button-icon {
@@ -403,7 +403,7 @@
     stroke: currentColor;
     width: 42px;
     height: 15px;
-	transition: transform $duratoin $timing-function;
+    transition: transform $duratoin $timing-function;
     &:hover {
       stroke: currentColor;
       transform: scale(1.25);
@@ -593,16 +593,16 @@
   }
 
   .card__button:focus .button-icon {
-	transform: scale(1.5);
-	outline: none;
+    transform: scale(1.5);
+    outline: none;
   }
-  
+
   .button-icon {
     background-color: transparent;
     stroke: currentColor;
     width: 42px;
     height: 16px;
-	transition: transform $duratoin $timing-function;
+    transition: transform $duratoin $timing-function;
     &:hover {
       stroke: currentColor;
       transform: scale(1.25);
