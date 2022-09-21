@@ -66,6 +66,7 @@
   padding-bottom: 63px;
   transform: translateX(0);
   transition: transform $duratoin $timing-function;
+  
   &__list {
     display: flex;
     flex-direction: column;
@@ -111,7 +112,6 @@
   opacity: 0;
   pointer-events: none;
   transform: translateX(100%);
-  transition: transform $duratoin $timing-function;
 }
 
 .main-button--none {
