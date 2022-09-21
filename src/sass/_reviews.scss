@@ -5,7 +5,7 @@
 .slide-coment {
     @media screen and (max-width: 480px) {
         max-width: 100%;
-        background-color: rgb(36, 138, 227);
+        background-color: $main-bg-color;
         font-weight: 400;
         font-size: 12px;
         line-height: 255%;
@@ -22,7 +22,7 @@
 @include mobile {
     .slide-coment {
         max-width: 100%;
-        background-color: rgb(36, 138, 227);
+        background-color: $main-bg-color;
         font-weight: 400;
         font-size: 12px;
         line-height: 255%;
@@ -89,7 +89,7 @@
         font-size: 14px;
         line-height: 186%;
         letter-spacing: 0.04em;
-        background-color: rgb(36, 138, 227);
+        background-color: $main-bg-color;
         text-align: center;
         color: #FCFCFC;
         border-radius: 10px;
@@ -104,7 +104,7 @@
 .slide-coment {
     width: 968px;
     height: 138px;
-    background-color: rgb(36, 138, 227);
+    background-color: $main-bg-color;
     font-size: 16px;
     line-height: 186%;
     text-align: center;
@@ -126,3 +126,11 @@
                     color: #131313;
                     margin-bottom: 33px;
     } }
+
+.swiper-pagination {
+    position: static;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $main-bg-color;
+}
