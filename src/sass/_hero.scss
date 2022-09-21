@@ -122,21 +122,20 @@
 
   .list__ice {
     position: absolute;
-    bottom: -239;
-    left: 50%;
     filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
     z-index: 1;
-    transform: translateX(-50%);
-    @include tablet {
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -239;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       bottom: -24;
-      left: 418;
-      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
-      transform: translate(0);
+      right: 93;
     }
     @include desktop {
-      bottom: 0;
-      right: 0;
-      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+      bottom: -103;
+      right: 102;
     }
   }
 
@@ -145,42 +144,52 @@
     z-index: 1;
   }
   .list__face:nth-child(2) {
-    bottom: -141;
-    left: 50%;
-    transform: translateX(-90%);
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -141;
+      left: 50%;
+      transform: translateX(-90%);
+    }
     @include tablet {
-      bottom: 130;
-      left: 458;
-      transform: translateX(0);
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 130;
+        left: 458;
+      }
     }
     @include desktop {
-      bottom: 266;
+      bottom: 163;
       right: 298;
     }
   }
   .list__face:nth-child(3) {
-    bottom: -114;
-    left: 50%;
-    transform: translateX(-10%);
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -114;
+      left: 50%;
+      transform: translateX(-10%);
+    }
     @include tablet {
-      bottom: 173;
-      left: 532;
-      transform: translateX(0);
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 173;
+        right: 110;
+      }
     }
     @include desktop {
-      bottom: 342;
-      right: 115;
+      bottom: 240;
+      right: 116;
     }
   }
   .list__face:nth-child(4) {
-    bottom: -189;
-    left: 50%;
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -189;
+      left: 50%;
+    }
     @include tablet {
-      bottom: 55;
-      left: 541;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 55;
+        right: 96;
+      }
     }
     @include desktop {
-      bottom: 138;
+      bottom: 34;
       right: 93;
     }
   }
