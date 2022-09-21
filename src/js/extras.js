@@ -4,7 +4,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 // ..
-AOS.init({ duration: 1000, delay: 100 });
+AOS.init({
+  duration: 1000,
+  delay: 100,
+});
 
 // Add to all images lazy loading and fade in on scroll
 (function () {

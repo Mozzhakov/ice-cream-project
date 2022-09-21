@@ -9,7 +9,7 @@
   right: 20px;
   font-family: $secondary-ff;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 
   background-color: $accent-color;
   border: 0px;
@@ -87,6 +87,7 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
