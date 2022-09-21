@@ -20,8 +20,10 @@
   "dependencies": {
     "@vimeo/player": "^2.17.1",
     "aos": "^3.0.0-beta.6",
+    "lodash.isempty": "^4.4.0",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
     "swiper": "^8.4.2"
   },
   "devDependencies": {
