@@ -4,19 +4,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 // ..
-AOS.init();
+AOS.init({ duration: 1000, delay: 100 });
 
 // Add to all images lazy loading and fade in on scroll
 (function () {
   document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
   });
-
-  // const h1 = document.querySelectorAll('section');
-  // console.log(h1);
-  // h1.forEach(div => {
-  //   div.setAttribute('data-aos', 'fade-in');
-  // });
 })();
 
 // Set scroll to top button content
