@@ -31,6 +31,7 @@ padding-top: 12px;
     }
 }
 .nav {
+    
     @media screen and (max-width:1199px) {
     display: none;
     }
@@ -49,7 +50,9 @@ padding-top: 12px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.3;
-    cursor: url ("./images/header/icon.svg#icon-cursor"), auto;
+    &:hover {
+            cursor: url ("./images/header/vector.png"), auto;
+        }
 
     
     color: $white-text-color;
