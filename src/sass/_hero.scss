@@ -20,22 +20,34 @@
     }
   }
 
-  padding-top: 110px;
+  padding-top: 61px;
   padding-bottom: 239px;
   background-image: url(../images/hero/ellipse-mob-1x.png);
+  @media (min-resolution: 2dppx) {
+    background-image: url(../images/hero/ellipse-mob-2x.png);
+    background-size: auto 49px;
+  }
   background-repeat: no-repeat;
   background-position: bottom;
   @include tablet {
-    padding-top: 104px;
+    padding-top: 40px;
     padding-bottom: 24px;
     background-image: url(../images/hero/ellipse-tablet-1x.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/hero/ellipse-tablet-2x.png);
+      background-size: auto 67px;
+    }
     background-repeat: no-repeat;
     background-position: bottom;
   }
   @include desktop {
-    padding-top: 118px;
+    padding-top: 45px;
     padding-bottom: 103px;
     background-image: url(../images/hero/ellipse-desktop-1x.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/hero/ellipse-desktop-2x.png);
+      background-size: auto 384px;
+    }
     background-repeat: no-repeat;
     background-position: bottom;
   }
