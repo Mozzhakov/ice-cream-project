@@ -9,34 +9,37 @@
 <div class="mob-menu is-hidden" data-menu>
   <div class="container-mob">
     <a href="./index.html" class="mob-menu__logo logo"
-      ><picture
-        ><source
+      ><picture>
+        <source
           srcset="
             ./images/header/logo-tablet-1x.png 1x,
             ./images/header/logo-tablet-2x.png 2x
           "
-          media="(min-width:768px)" />
+          media="(min-width:768px)"
+        />
         <source
           srcset="
             ./images/header/logo-mobile-1x.png 1x,
             ./images/header/logo-mobile-2x.png 2x
           "
-          media="(max-width:767px)" />
+          media="(max-width:767px)"
+        />
         <img
           src="./images/header/logo-desktop-1x.png"
           alt="Зображення морозива"
           width="60"
           ;
           height="65"
-          ; /></picture
+          ;
+        /> </picture
     ></a>
-    <button type="button" class="menu-btn menu-btn--close" data-menu-close>
+    <button type="button" class="menu-btn menu-btn--close" data-menu-close-mob>
       <svg class="menu-btn__icon" width="32px" height="32px">
         <use href="./images/symbol-defs.svg#icon-btn-menu-close"></use>
       </svg>
     </button>
     <nav class="mob-menu__navigation">
-      <ul class="mob-menu__list list">
+      <ul class="mob-menu-list mob-menu__list list">
         <li class="mob-menu__item">
           <a
             href="./index.html"
@@ -45,13 +48,13 @@
           >
         </li>
         <li class="mob-menu__item">
-          <a href="#" class="link mob-menu__link">How it’s made?</a>
+          <a href="#about" class="link mob-menu__link">How it’s made?</a>
         </li>
         <li class="mob-menu__item">
-          <a href="#" class="link mob-menu__link">Our products</a>
+          <a href="#products" class="link mob-menu__link">Our products</a>
         </li>
         <li class="mob-menu__item">
-          <a href="#" class="link mob-menu__link">Contact</a>
+          <a href="#contacts" class="link mob-menu__link">Contact</a>
         </li>
       </ul>
     </nav>
