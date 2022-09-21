@@ -1,14 +1,42 @@
 .contacts {
+    background-image: linear-gradient(
+        to bottom,
+        #0000 26%,
+        $main-bg-color 10%,
+        $main-bg-color 64%,
+    );
+    @include tablet {
+        background-image: linear-gradient(
+            to bottom,
+            #0000 50%,
+            $main-bg-color 10%,
+            $main-bg-color 40%,
+        );
+    }
+    @include desktop {
+        background-image: linear-gradient(
+            to bottom,
+            #0000 20%,
+            $main-bg-color 10%,
+            $main-bg-color 70%,
+        );
+    }
 
-.section {}
-
-.container {}
-
-.visually-hidden {}
-
-.contacts__list {}
-
-.list {}
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+    @include tablet {
+        flex-direction: row;
+        gap: 16px;
+        margin-bottom: 60px;
+    }
+    @include desktop {
+        gap: 32px;
+        margin-bottom: 64px;
+    }
+}
 
 .contacts__item {
     padding-top: 40px;
@@ -18,27 +46,39 @@
     background-color: $white-text-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
-    margin-bottom: 20px;
-    &:last-child {
-        margin-bottom: 32px;
+    width: calc(100% - 20px);
+    @include tablet {
+        padding-left: 24px;
+        padding-right: 24px;
+        width: calc((100% - 16px * 2) / 3);
+    }
+    @include desktop {
+        padding-left: 40px;
+        padding-right: 40px;
+        width: calc((100% - 32px * 2) / 3);
     }
 }
 
 .contacts__address {
     margin-bottom: 48px;
     position: relative;
+    @include tablet {
+        margin-bottom: 64px;
+    }
 }
 
 .contacts__type {
     @include font(500, 12px, 186%, 0.04em);
     display: inline-block;
-    justify-content: center;
-    text-align: center;
     padding: 0 23px;
     border-radius: 4px;
     color: $black-text-color;
     margin-bottom: 20px;
     background-color: $accent-color;
+    @include tablet {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
 }
 
 .contacts__city {
@@ -59,14 +99,22 @@
         background-color: #E1E1E1;
         bottom: -24px;
         left: 0;
+        @include tablet {
+            bottom: -32px;
+        }
+    }
+    &:hover,
+    &:focus {
+        text-decoration-line: underline;
     }
 }
-
-.link {}
 
 .contacts__schedule {
     margin-bottom: 48px;
     position: relative;
+    @include tablet {
+        margin-bottom: 64px;
+    }
 }
 
 .contacts__schedule-list {
@@ -79,11 +127,10 @@
         background-color: #E1E1E1;
         bottom: -24px;
         left: 0;
+        @include tablet {
+            bottom: -32px;
+        }
     }
-}
-
-.contacts__schedule-item {
-    
 }
 
 .contacts__days {
@@ -97,23 +144,39 @@
 }
 
 .contacts__links .link {
+    display: block;
     @include font(500, 12px, 150%, 0.04em);
     color: $black-text-color;
 }
-
-.contacts__tel {}
-
-.contacts__mail {}
 
 .contacts__buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
-.contacts__buttons .main-button {
-    margin-bottom: 16px;
+.contacts__svg {
+    stroke: currentColor;
+    margin-left: 6px;
 }
 
-.contacts__svg {}
+.list {
+    .contacts__links .link,
+    .contacts__time,
+    .contacts__days,
+    .contacts__loc.link,
+    .contacts__city {
+        @include tablet {
+            font-size: 14px;
+        }
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+}
 }
