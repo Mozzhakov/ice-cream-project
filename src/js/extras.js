@@ -4,16 +4,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 // ..
-AOS.init();
+AOS.init({ duration: 1000, delay: 100 });
 
 // Add to all images lazy loading and fade in on scroll
 (function () {
   document.querySelectorAll('img').forEach(img => {
     img.setAttribute('loading', 'lazy');
-    // img.setAttribute('data-aos', 'fade-in');
-    // img.setAttribute('data-aos-delay', '200');
-    // img.setAttribute('data-aos-duration', '500');
-    // img.setAttribute('data-aos-placement', 'bottom-center');
   });
 })();
 
@@ -21,11 +17,14 @@ AOS.init();
 
 const setScrollButtonContent = function (windowHeight) {
   const scrollButtonToTop = document.querySelector('.extras__scroll-to-top');
+  const navSideMenu = document.querySelector('.side-dotted-menu');
 
   if (windowHeight >= 700) {
     scrollButtonToTop.classList.add('active');
+    navSideMenu.classList.add('active');
   } else {
     scrollButtonToTop.classList.remove('active');
+    navSideMenu.classList.remove('active');
   }
 
   if (window.innerWidth < 768) {
@@ -38,7 +37,7 @@ window.addEventListener(
   'scroll',
   throttle(() => {
     setScrollButtonContent(window.pageYOffset);
-  }, 250)
+  }, 500)
 );
 
 setScrollButtonContent();
