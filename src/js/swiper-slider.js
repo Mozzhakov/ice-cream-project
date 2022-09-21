@@ -1,11 +1,11 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
   loop: true,
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -18,4 +18,18 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
+  // keyboard control
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  // mouse wheel scrolling
+  mousewheel: {
+    sensitivity: 1
+  },
+  
+  autoHeight: true,
+  
 });

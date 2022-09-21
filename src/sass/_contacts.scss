@@ -1,0 +1,119 @@
+.contacts {
+
+.section {}
+
+.container {}
+
+.visually-hidden {}
+
+.contacts__list {}
+
+.list {}
+
+.contacts__item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: $white-text-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 32px;
+    }
+}
+
+.contacts__address {
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.contacts__type {
+    @include font(500, 12px, 186%, 0.04em);
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    padding: 0 23px;
+    border-radius: 4px;
+    color: $black-text-color;
+    margin-bottom: 20px;
+    background-color: $accent-color;
+}
+
+.contacts__city {
+    margin-bottom: 8px;
+    @include font(500, 12px, 186%, 0.04em);
+    color: $black-text-color;
+}
+
+.contacts__loc.link {
+    @include font(500, 12px, 183%, 0.04em);
+    color: $products-brown-color;
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #E1E1E1;
+        bottom: -24px;
+        left: 0;
+    }
+}
+
+.link {}
+
+.contacts__schedule {
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.contacts__schedule-list {
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #E1E1E1;
+        bottom: -24px;
+        left: 0;
+    }
+}
+
+.contacts__schedule-item {
+    
+}
+
+.contacts__days {
+    @include font(500, 12px, 186%, 0.04em);
+    color: $black-text-color;
+}
+
+.contacts__time {
+    @include font(500, 12px, 186%, 0.04em);
+    color: $disabled-color;
+}
+
+.contacts__links .link {
+    @include font(500, 12px, 150%, 0.04em);
+    color: $black-text-color;
+}
+
+.contacts__tel {}
+
+.contacts__mail {}
+
+.contacts__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts__buttons .main-button {
+    margin-bottom: 16px;
+}
+
+.contacts__svg {}
+}
