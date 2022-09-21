@@ -4,6 +4,9 @@
   @include tablet {
     padding-bottom: 48px;
   }
+  @include desktop {
+    padding-bottom: 99px;
+  }
 }
 
 .about-pre-title {
