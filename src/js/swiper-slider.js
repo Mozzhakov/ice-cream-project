@@ -24,11 +24,6 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
     onlyInViewport: true,
   },
-
-  // mouse wheel scrolling
-  mousewheel: {
-    sensitivity: 1
-  },
   
   autoHeight: true,
   
