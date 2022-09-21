@@ -109,6 +109,24 @@
   visibility: hidden;
 
   transition: all $timing-function $duratoin;
+  a {
+    text-decoration: none;
+  }
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }
 
   &.active {
     opacity: 1;
@@ -139,6 +157,7 @@
       transform: scale(0);
 
       transition: opacity 400ms ease-out 200ms, background 400ms ease-out;
+      text-decoration: none;
     }
 
     &:hover {
