@@ -1,13 +1,13 @@
 @media screen and (max-width:767px) {
 
-	.section.products {
-		background-color: #fff;
+	/*.section.products {
+			background-color: #fff;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		width: 100%;
 		background-image: url("../images/products/mobile/background-mobile.svg");
-	}
+	}*/
 
 	.products__pre-title {
 		@include font(800, 18px, 1.2, тnull);
@@ -207,10 +207,11 @@
 
 
 @media screen and (min-width:768px) {
-	.section.products {
-		background-color: #fff;
-		background-image: url("../images/products/tablet/backgroung-tablet.svg");
-	}
+	/*.section.products {
+				background-color: #fff;
+				background-image: url("../images/products/tablet/backgroung-tablet.svg");
+	}*/
+
 
 	.products__pre-title {
 		@include font(800, 22px, 1.22, null);
@@ -415,11 +416,13 @@
 
 
 
+
+
 @media screen and (min-width:1200px) {
-	.section.products {
-		background-color: #fff;
+	/*.section.products {
+			background-color: #fff;
 		background-image: url("../images/products/desktop/background-desctop.svg");
-	}
+	}*/
 
 	.products__title {
 		@include font(400, 36px, 1.25, 0.04em);
