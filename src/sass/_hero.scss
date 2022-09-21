@@ -1,25 +1,75 @@
 .hero {
-  @media screen and (min-width: 319px) and (max-width: 767px) {
-    display: flex;
-    justify-content: center;
+  .container {
+    @media screen and (min-width: 319px) and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
+    position: relative;
   }
-  position: relative;
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .about-icecream {
+      display: none;
+    }
+    .cafe {
+      display: none;
+    }
+    .plate-tablet {
+      display: none;
+    }
+  }
+
   padding-top: 110px;
   padding-bottom: 239px;
+  background-image: url(../images/hero/ellipse-mob-1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @include tablet {
+    padding-top: 104px;
+    padding-bottom: 24px;
+    background-image: url(../images/hero/ellipse-tablet-1x.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include desktop {
+    padding-top: 118px;
+    padding-bottom: 103px;
+    background-image: url(../images/hero/ellipse-desktop-1x.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
   &__title {
     max-width: 274px;
     font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 1.27;
-    letter-spacing: 0.04em;
+    @include font(400, 26px, 1.27, 0.04em);
     text-transform: uppercase;
     color: #fcfcfc;
+    @include tablet {
+      max-width: 181px;
+      font-family: 'Seymour One';
+      @include font(400, 18px, 1.28, null);
+      color: #fcfcfc;
+    }
+    @include desktop {
+      min-width: 367px;
+      font-family: 'Seymour One';
+      @include font(400, 38px, 1.26, 0.04em);
+      color: #fcfcfc;
+    }
     & .pos {
       font-size: 34px;
       line-height: 0.97;
-      letter-spacing: 0;
+      letter-spacing: 0.04;
+      @include tablet {
+        font-size: 24px;
+        line-height: 0.54;
+        letter-spacing: 0.04;
+      }
+      @include desktop {
+        font-size: 38px;
+        line-height: 1.26;
+        letter-spacing: 0.04;
+      }
     }
   }
 
@@ -69,13 +119,24 @@
     }
   }
 
-  .ice__list {
+  .list__ice {
     position: absolute;
-    bottom: 0;
+    bottom: -239;
     left: 50%;
     filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
     z-index: 1;
     transform: translateX(-50%);
+    @include tablet {
+      bottom: -24;
+      left: 418;
+      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+      transform: translate(0);
+    }
+    @include desktop {
+      bottom: 0;
+      right: 0;
+      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+    }
   }
 
   .list__face {
@@ -83,146 +144,82 @@
     z-index: 1;
   }
   .list__face:nth-child(2) {
-    bottom: 98;
-    left: 25;
+    bottom: -141;
+    left: 50%;
+    transform: translateX(-90%);
+    @include tablet {
+      bottom: 130;
+      left: 458;
+      transform: translateX(0);
+    }
+    @include desktop {
+      bottom: 266;
+      right: 298;
+    }
   }
   .list__face:nth-child(3) {
-    bottom: 125;
-    left: 71;
+    bottom: -114;
+    left: 50%;
+    transform: translateX(-10%);
+    @include tablet {
+      bottom: 173;
+      left: 532;
+      transform: translateX(0);
+    }
+    @include desktop {
+      bottom: 342;
+      right: 115;
+    }
   }
   .list__face:nth-child(4) {
-    bottom: 50;
-    left: 77;
-  }
-
-  .about-icecream {
-    display: none;
-  }
-  .cafe {
-    display: none;
-  }
-
-  .ice__list-tablet {
-    display: none;
-  }
-
-  .ellipse-tablet {
-    display: none;
-  }
-
-  .ice__list-desktop {
-    display: none;
-  }
-  .ellipse-desktop {
-    display: none;
-  }
-
-  .elipse-mob-box {
-    position: absolute;
-    bottom: 0;
+    bottom: -189;
     left: 50%;
-    transform: translateX(-50%);
-    width: 328px;
     @include tablet {
-      display: none;
+      bottom: 55;
+      left: 541;
+    }
+    @include desktop {
+      bottom: 138;
+      right: 93;
     }
   }
 
   @include tablet {
-    padding-top: 104px;
-    padding-bottom: 13px;
-
-    &__title {
-      max-width: 181px;
-      font-family: 'Seymour One';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 23px;
-      text-transform: uppercase;
-
-      color: #fcfcfc;
-      & .pos {
-        font-size: 24px;
-        line-height: 0.54;
-      }
-    }
-
     .hero__top {
       display: flex;
       justify-content: space-between;
     }
 
-    .list__ice,
-    .list__face {
-      display: none;
-    }
-
-    .ellipse-mob {
-      display: none;
-    }
-
-    .plate-desktop {
-      display: none;
-    }
-    .about-icecream {
-      display: flex;
-      align-items: center;
-      margin-top: 28px;
-      .plate-tablet {
-        width: 152px;
-        height: 152px;
-        margin-right: 33px;
-        @include desktop {
-          display: none;
-        }
-      }
-      p {
-        max-width: 151px;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.42;
-
-        color: #fcfcfc;
-
-        @include desktop {
-          font-size: 14px;
-          line-height: 1.43;
-          max-width: 200px;
-        }
-      }
-    }
-
-    .ice__list-tablet {
+    .plate-tablet {
       display: block;
+      position: absolute;
+      bottom: -11;
+      left: 32;
       @include desktop {
-        display: none;
+        left: 17;
+        bottom: -38;
       }
     }
 
-    .list__ice-tablet {
-      position: absolute;
-      bottom: 0;
-      right: 93px;
-      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
-    }
+    .about-icecream {
+      max-width: 151px;
+      margin-top: 39px;
+      margin-left: 185px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.42;
 
-    .list__face-tablet {
-      position: absolute;
-    }
-    .list__face-tablet:nth-child(2) {
-      bottom: 153;
-      right: 210;
-    }
-    .list__face-tablet:nth-child(3) {
-      bottom: 197;
-      right: 110;
-    }
-    .list__face-tablet:nth-child(4) {
-      bottom: 78;
-      right: 96;
+      color: #fcfcfc;
+
+      @include desktop {
+        margin-top: 111px;
+        margin-left: 240px;
+        font-size: 14px;
+        line-height: 1.43;
+        max-width: 200px;
+      }
     }
 
     .arrow-icon {
@@ -241,28 +238,6 @@
       }
     }
 
-    .ellipse-tablet {
-      display: block;
-      @include desktop {
-        display: none;
-      }
-    }
-
-    .ellipse-tablet-left {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-    }
-    .ellipse-tablet-right {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-    }
-    .cafe {
-      display: block;
-    }
     .cafe-track {
       font-family: 'Montserrat';
       @include font(900, 28px, 1.21, 0.04em);
@@ -284,67 +259,6 @@
           @include font(400, 14px, 1.21, null);
         }
       }
-    }
-  }
-  @include desktop {
-    padding-top: 118px;
-    padding-bottom: 65px;
-
-    &__title {
-      min-width: 367px;
-      font-family: 'Seymour One';
-      @include font(400, 38px, 1.26, 0.04em);
-      text-transform: uppercase;
-
-      color: #fcfcfc;
-      & .pos {
-        font-size: 38px;
-        line-height: 1.26;
-      }
-    }
-
-    .about-icecream {
-      margin-top: 42px;
-      z-index: 1;
-    }
-
-    .plate-desktop {
-      margin-right: 14px;
-      display: block;
-    }
-    .ellipse-desktop {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .ice__list-desktop {
-      display: block;
-    }
-
-    .list__ice-desktop {
-      position: absolute;
-      bottom: 0;
-      right: 102px;
-      filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
-    }
-
-    .list__face-desktop {
-      position: absolute;
-    }
-    .list__face-desktop:nth-child(2) {
-      bottom: 266;
-      right: 298;
-    }
-    .list__face-desktop:nth-child(3) {
-      bottom: 342;
-      right: 115;
-    }
-    .list__face-desktop:nth-child(4) {
-      bottom: 138;
-      right: 93;
     }
   }
 }

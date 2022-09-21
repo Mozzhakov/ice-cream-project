@@ -1,70 +1,287 @@
-<section class="hero container">
-  <div class="hero__top">
-    <div>
-      <h1 class="hero__title">
-        ice cream made with <span class="pos">passion</span>
-      </h1>
-      <ul class="hero__list list">
-        <li class="hero__item">
-          <a class="products-button link" href="">Products</a>
-        </li>
-        <li class="hero__item">
-          <a class="hero__link link" href="">How it’s made?</a>
-        </li>
-      </ul>
+<section class="hero">
+  <div class="container">
+    <div class="hero__top">
+      <div>
+        <h1 class="hero__title">
+          ice cream made with <span class="pos">passion</span>
+        </h1>
+        <ul class="hero__list list">
+          <li class="hero__item">
+            <a class="products-button link" href="#products">Products</a>
+          </li>
+          <li class="hero__item">
+            <a class="hero__link link" href="#about">How it’s made?</a>
+          </li>
+        </ul>
+      </div>
+      <div class="cafe">
+        <ul class="cafe-track list">
+          <li>
+            <p>16</p>
+            <span class="cafe-track-item">cafes</span>
+          </li>
+          <li>
+            <p>23</p>
+            <span class="cafe-track-item">food trucks</span>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="cafe">
-      <ul class="cafe-track list">
-        <li>
-          <p>16</p>
-          <span class="cafe-track-item">cafes</span>
-        </li>
-        <li>
-          <p>23</p>
-          <span class="cafe-track-item">food trucks</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- mobile ice-cream -->
-  <ul class="ice__list list">
-    <li class="list__ice">
-      <img src="./images/hero/ice-cream-mobile-1x.png" alt="" />
-    </li>
-    <li class="list__face"><img src="./images/hero/ice-face.png" alt="" /></li>
-    <li class="list__face">
-      <img src="./images/hero/ice-face-2.png" alt="" />
-    </li>
-    <li class="list__face">
-      <img src="./images/hero/ice-face-3.png" alt="" />
-    </li>
-  </ul>
-  <div class="elipse-mob-box">
-    <img
-      class="elipse-mob-img"
-      src="./images/hero/ellipse-mob.png"
-      alt=""
-      width="328"
-      height="50"
-    />
-  </div>
-  <!-- tablet ice-cream -->
-  <div class="about-icecream">
-    <img
-      class="plate-tablet"
-      src="./images/hero/plate-tablet-1x.png"
-      alt=""
-      width="152"
-      height="152"
-    />
-    <img
-      class="plate-desktop"
-      src="./images/hero/plate-desktop-1x.png"
-      alt=""
-      width="225"
-      height="225"
-    />
-    <p>
+    <!-- mobile ice-cream -->
+    <ul class="ice__list list">
+      <li>
+        <picture class="list__ice">
+          <source
+            srcset="
+              ./images/hero/ice-cream-desktop-1x.webp 1x,
+              ./images/hero/ice-cream-desktop-2x.webp 2x
+            "
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-cream-desktop-1x.png 1x,
+              ./images/hero/ice-cream-desktop-2x.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-cream-tablet-1x.webp 1x,
+              ./images/hero/ice-cream-tablet-2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-cream-tablet-1x.png 1x,
+              ./images/hero/ice-cream-tablet-2x.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-cream-mobile-1x.webp 1x,
+              ./images/hero/ice-cream-mobile-2x.webp 2x
+            "
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-cream-mobile-1x.png 1x,
+              ./images/hero/ice-cream-mobile-2x.png 2x
+            "
+            media="(max-width:767px)"
+          />
+          <img
+            class="item__icecream-mob"
+            src="./images/hero/ice-cream-mobile-1x.png"
+            alt=""
+            width=""
+          />
+        </picture>
+      </li>
+      <li class="list__face">
+        <picture>
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-1-1x.webp 1x,
+              ./images/hero/ice-face-desktop-1-2x.webp 2x
+            "
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-1-1x.png 1x,
+              ./images/hero/ice-face-desktop-1-2x.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-1-1x.webp 1x,
+              ./images/hero/ice-face-tablet-1-2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-1-1x.png 1x,
+              ./images/hero/ice-face-tablet-1-2x.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-1-1x.webp 1x,
+              ./images/hero/ice-face-mob-1-2x.webp 2x
+            "
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-1-1x.png 1x,
+              ./images/hero/ice-face-mob-1-2x.png 2x
+            "
+            media="(max-width:767px)"
+          />
+          <img
+            src="./images/hero/ice-face-mob-1-1x.png"
+            alt="ice-cream-face"
+            width=""
+          />
+        </picture>
+      </li>
+      <li class="list__face">
+        <picture>
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-2-1x.webp 1x,
+              ./images/hero/ice-face-desktop-2-2x.webp 2x
+            "
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-2-1x.png 1x,
+              ./images/hero/ice-face-desktop-2-2x.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-2-1x.webp 1x,
+              ./images/hero/ice-face-tablet-2-2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-2-1x.png 1x,
+              ./images/hero/ice-face-tablet-2-2x.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-2-1x.webp 1x,
+              ./images/hero/ice-face-mob-2-2x.webp 2x
+            "
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-2-1x.png 1x,
+              ./images/hero/ice-face-mob-2-2x.png 2x
+            "
+            media="(max-width:767px)"
+          />
+          <img
+            src="./images/hero/ice-face-mob-2-1x.png"
+            alt="ice-cream-face"
+            width=""
+          />
+        </picture>
+      </li>
+      <li class="list__face">
+        <picture>
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-3-1x.webp 1x,
+              ./images/hero/ice-face-desktop-3-2x.webp 2x
+            "
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-desktop-3-1x.png 1x,
+              ./images/hero/ice-face-desktop-3-2x.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-3-1x.webp 1x,
+              ./images/hero/ice-face-tablet-3-2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-tablet-3-1x.png 1x,
+              ./images/hero/ice-face-tablet-3-2x.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-3-1x.webp 1x,
+              ./images/hero/ice-face-mob-3-2x.webp 2x
+            "
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/hero/ice-face-mob-3-1x.png 1x,
+              ./images/hero/ice-face-mob-3-2x.png 2x
+            "
+            media="(max-width:767px)"
+          />
+          <img
+            src="./images/hero/ice-face-mob-3-1x.png"
+            alt="ice-cream-face"
+            width=""
+          />
+        </picture>
+      </li>
+    </ul>
+    <!-- tablet ice-cream -->
+    <picture class="plate-tablet">
+      <source
+        srcset="
+          ./images/hero/plate-desktop-1x.webp 1x,
+          ./images/hero/plate-desktop-2x.webp 2x
+        "
+        media="(min-width:1200px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/hero/plate-desktop-1x.png 1x,
+          ./images/hero/plate-desktop-2x.png 2x
+        "
+        media="(min-width:1200px)"
+      />
+      <source
+        srcset="
+          ./images/hero/plate-tablet-1x.webp 1x,
+          ./images/hero/plate-tablet-2x.webp 2x
+        "
+        media="(min-width:768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/hero/plate-tablet-1x.png 1x,
+          ./images/hero/plate-tablet-2x.png 2x
+        "
+        media="(min-width:768px)"
+      />
+      <img src="./images/hero/plate-tablet-1x.png" alt="" width="" />
+    </picture>
+    <p class="about-icecream">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et
       <a href="#" class="arrow">
@@ -74,69 +291,4 @@
       </a>
     </p>
   </div>
-  <ul class="ice__list-tablet list">
-    <li class="list__ice-tablet">
-      <img
-        src="./images/hero/ice-cream-tablet-1x.png"
-        alt=""
-        width="257"
-        height="325"
-      />
-    </li>
-    <li class="list__face-tablet">
-      <img src="./images/hero/ice-face-tablet-1x.png" alt="" />
-    </li>
-    <li class="list__face-tablet">
-      <img src="./images/hero/ice-face-tablet-2-1x.png" alt="" />
-    </li>
-    <li class="list__face-tablet">
-      <img src="./images/hero/ice-face-tablet-3-1x.png" alt="" />
-    </li>
-  </ul>
-  <ul class="ellipse-tablet list">
-    <li>
-      <img
-        class="ellipse-tablet-left"
-        src="./images/hero/ellipse-tablet-left-1x.png"
-        alt=""
-        width="110"
-        height="34"
-      />
-    </li>
-    <li>
-      <img
-        class="ellipse-tablet-right"
-        src="./images/hero/ellipse-tablet-right-1x.png"
-        alt=""
-        width="182"
-        height="63"
-      />
-    </li>
-  </ul>
-  <img
-    class="ellipse-desktop"
-    src="./images/hero/ellipse-desktop-1x.png"
-    alt=""
-    width="1200"
-    height="384"
-  />
-  <ul class="ice__list-desktop list">
-    <li class="list__ice-desktop">
-      <img
-        src="./images/hero/ice-cream-desktop-1x.png"
-        alt=""
-        width="447"
-        height="561"
-      />
-    </li>
-    <li class="list__face-desktop">
-      <img src="./images/hero/ice-face-desktop-1.png" alt="" />
-    </li>
-    <li class="list__face-desktop">
-      <img src="./images/hero/ice-face-desktop-2.png" alt="" />
-    </li>
-    <li class="list__face-desktop">
-      <img src="./images/hero/ice-face-desktop-3.png" alt="" />
-    </li>
-  </ul>
 </section>
