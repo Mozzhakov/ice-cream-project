@@ -103,7 +103,6 @@
 		display: flex;
 		width: 200.33px;
 		height: 199.68px;
-		padding: 0px 40px;
 		top: 11.32px;
 		align-items: center;
 		border-radius: 50%;
@@ -181,28 +180,22 @@
 
 	.button-icon {
 		background-color: transparent;
-		stroke: currentColor;
-		width: 42px;
-		height: 15px;
-
 
 		&:hover {
-			stroke: currentColor;
+
 			transform: scale(1.7);
 			background-color: transparent;
-			/*	width: 52px;
-		height: 16px;*/
+
 		}
 
 		&:focus {
-			stroke: currentColor;
+
 			transform: scale(2);
 			background-color: transparent;
-			/*width: 55px;
-		height: 23px;*/
 		}
 	}
 }
+
 
 
 
@@ -237,7 +230,6 @@
 		flex-wrap: wrap;
 		gap: 15px;
 		justify-content: center;
-
 	}
 
 	.products__card {
@@ -374,6 +366,7 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 40px;
 	}
 
 	.card__text {
@@ -384,6 +377,7 @@
 		color: #131313;
 		line-height: 176%;
 		text-align: center;
+		height: 375px;
 	}
 
 	.card__button {
@@ -394,19 +388,14 @@
 
 	.button-icon {
 		background-color: transparent;
-		stroke: currentColor;
-		width: 42px;
-		height: 15px;
 
 
 		&:hover {
-			stroke: currentColor;
 			transform: scale(1.7);
 
 		}
 
 		&:focus {
-			stroke: currentColor;
 			transform: scale(2);
 		}
 	}
@@ -486,7 +475,7 @@
 		justify-content: space-between;
 		padding: 0px 64px;
 		top: 166px;
-		bottom: 10px;
+		bottom: 50px;
 	}
 
 	.card__item--ice-cream {
@@ -581,6 +570,7 @@
 		color: $black-text-color;
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 65px;
 	}
 
 	.card__text {
@@ -588,6 +578,7 @@
 		color: $black-text-color;
 		line-height: 176%;
 		text-align: center;
+		height: 142px;
 	}
 
 	.card__button {
@@ -598,23 +589,14 @@
 
 	.button-icon {
 		background-color: transparent;
-		stroke: currentColor;
-		width: 42px;
-		height: 16px;
-
 
 		&:hover {
-			stroke: currentColor;
 			transform: scale(1.7);
-			/*	width: 52px;
-				height: 16px;*/
+
 		}
 
 		&:focus {
-			stroke: currentColor;
 			transform: scale(2);
-			/*width: 55px;
-				height: 23px;*/
 		}
 	}
 }
