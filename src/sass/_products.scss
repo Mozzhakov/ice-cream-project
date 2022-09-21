@@ -208,10 +208,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  // .section.products {
-  // 	background-color: #fff;
-  // 	background-image: url("../images/products/tablet/backgroung-tablet.svg");
-  // }
+  .products {
+	padding-bottom: 80px;
+  }
 
   .products__pre-title {
     @include font(800, 22px, 1.22, null);

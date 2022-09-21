@@ -1,5 +1,14 @@
 .advantages {
   background-color: $main-bg-color;
+  padding-top: 0;
+  padding-bottom: 18px;
+  @include tablet {
+    padding-bottom: 39px;
+  }
+
+  @include desktop {
+    padding-bottom: 86px;
+  }
 }
 
 .advantages-list {

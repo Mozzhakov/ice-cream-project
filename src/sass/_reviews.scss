@@ -1,3 +1,15 @@
+.reviews {
+    padding-top: 40px;
+    padding-bottom: 24px;
+ @include tablet {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    }
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 50px;
+  }
+}
 .swiper {
     text-align: center;
 }

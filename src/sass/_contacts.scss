@@ -1,4 +1,14 @@
 .contacts {
+    padding-top: 24px;
+    padding-bottom: 39px;
+    @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    }
+  @include desktop {
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
     background-image: linear-gradient(
         to bottom,
         #0000 26%,
