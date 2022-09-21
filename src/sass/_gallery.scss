@@ -1,5 +1,15 @@
 .gallery {
   max-width: 100%;
+  padding-top: 18px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 0px;
+    padding-bottom: 30px;
+    }
+  @include desktop {
+    padding-top: 43px;
+    padding-bottom: 64px;
+  }
   background-image: linear-gradient(to bottom, $main-bg-color 31%, rgba(255, 255, 255, 0.014) 31%);
 
   @include tablet {

@@ -28,9 +28,11 @@
         margin-bottom: 16px;
         @include tablet {
             font-size: 26px;
+            margin-bottom: 9px;
            }
         @include desktop {
             font-size: 30px;
+            margin-bottom: 14px;
            }   
     }
 
@@ -44,6 +46,7 @@
         margin-bottom: 40px;
         @include tablet {
             font-size: 48px;
+            margin-bottom: 0px;
            }
         @include desktop {
             font-size: 58px;
@@ -55,10 +58,13 @@
     text-align: end;
 }
     .soc {
-        margin-bottom: 40px;
+        margin-bottom: 38px;
         display: flex;
         gap: 25px;
         justify-content: end;
+        @include tablet {
+            margin-bottom: 32px;
+           }
     }
 
     // .soc__item {
@@ -112,7 +118,7 @@
     }
 
     .license-box {
-        margin-top: 40px;
+        margin-top: 32px;
         border-top: 1px solid #E1E1E1;
     }
 
