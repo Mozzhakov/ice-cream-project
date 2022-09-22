@@ -403,6 +403,17 @@
   }
 }
 
+.vimeo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+// style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+
 // ------------ MODAL OUR LOCATIONS
 
 .modal__our-location {
@@ -449,6 +460,11 @@
     width: 100%;
     object-fit: cover;
   }
+}
+
+.google {
+  width: 100%;
+  height: 260px;
 }
 
 // ------------ modal FRANCHISE --------------------
