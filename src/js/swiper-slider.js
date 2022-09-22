@@ -26,5 +26,7 @@ const swiper = new Swiper('.swiper', {
   },
   
   autoHeight: true,
+  spaceBetween: 50,
+  speed: 750,
   
 });
