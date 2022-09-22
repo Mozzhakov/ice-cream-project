@@ -68,6 +68,7 @@ padding-top: 12px;
     }
 .menu-btn {
     display: flex;
+    padding: 0;
     border: none;
     background-color: transparent;
         @include tablet {
