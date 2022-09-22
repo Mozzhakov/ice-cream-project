@@ -1,0 +1,147 @@
+
+.header {
+background-color: $main-bg-color;
+padding-top: 12px;
+@include tablet {
+    padding-top: 20px;
+}
+@include desktop {
+    padding-top: 8px;
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    @include desktop {
+        justify-content: space-between;
+    }  
+}
+.logo {
+    @media screen and (max-width:767px) {
+        // margin-top: 12px;
+        width: 40.47px;
+    }
+    @include tablet {
+    // margin-top: 20px;
+    width: 48px;
+    }
+    @include desktop {
+        // margin-top: 8px;
+        width: 60px;
+    }
+}
+.nav {
+    
+    @media screen and (max-width:1199px) {
+    display: none;
+    }
+}
+.list {
+    display: flex;
+}
+.item:not(:last-child) {
+    margin-right: 27px;
+}
+.link {
+    display: block;
+
+    font-family: $main-ff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    &:hover {
+            cursor: url ("./images/header/vector.png"), auto;
+        }
+
+    
+    color: $white-text-color;
+    
+        transition-property: color;
+        transition-duration: $timing-function;
+            transition-timing-function: $duratoin;
+    
+            &:hover,
+            &:focus {
+            color: $accent-color;
+    
+        }
+    }
+.menu-btn {
+    display: flex;
+    border: none;
+    background-color: transparent;
+        @include tablet {
+        margin-right: 32px;
+        }
+        
+    @include desktop {
+        display: none;
+        
+}
+}
+
+.main-button {
+            @include font(600, 14px, 1.2, null);
+            padding: 12px 34px;
+            font-family: $main-ff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $black-text-color;
+            stroke: currentColor;
+            background-color: $accent-color;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            transition: color $timing-function $duratoin,
+                background-color $timing-function $duratoin;
+    
+            &:hover {
+                background: $hover-green-color;
+            }
+    
+            &:focus {
+                color: $white-text-color;
+                background: $hover-green-color;
+            }
+    
+            &:disabled {
+                background: $disabled-color;
+            }
+    
+    @media screen and (max-width:767px) {
+    display: none;
+    } 
+    @include desktop {
+        margin-left: auto;
+    }
+    
+}
+.main-button-title {
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 1.2px;
+margin-right: 7px;
+}
+.icon-btn-after {
+    stroke: currentColor;
+
+    &:focus {
+        stroke: currentColor;
+    }
+}
+.position {
+    @media screen and (max-width:1199px) {
+    margin-left: auto;
+    }
+    
+@include tablet {
+    display: flex;
+    align-items: center;
+}
+}
+
+
+}
